@@ -1,0 +1,9 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
