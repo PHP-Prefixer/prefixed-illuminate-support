@@ -20,11 +20,14 @@ jobs:
       - name: 'Check'
         run: |
           ls -alhR
-#
-#      - name: Run PHP-Prefixer
-#        uses: PHP-Prefixer/php-prefixer-build-action@v0.0.6
-#        env:
-#          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        with:
-#          personal_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-#          project_id: ${{ secrets.PROJECT_ID }}
+
+      - name: Run PHP-Prefixer
+        uses: PHP-Prefixer/php-prefixer-build-action@v0.0.6
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          personal_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          project_id: ${{ secrets.PROJECT_ID }}
+          source_dir_path:
+          target_branch: 6.x-prefixed
+          gh_personal_access_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
