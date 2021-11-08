@@ -24,7 +24,6 @@ jobs:
         with:
           personal_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
-          source_repo: illuminate/support
           source_dir_path: illuminate/support
           target_branch: 6.x-prefixed
           gh_personal_access_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
