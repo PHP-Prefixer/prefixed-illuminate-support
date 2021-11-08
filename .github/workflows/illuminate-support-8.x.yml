@@ -1,0 +1,27 @@
+name: Prefixer
+
+on:
+  push:
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+#      - name: Checkout `illuminate`
+#        uses: actions/checkout@v2
+#        with:
+#          name: illuminate/support     # clone https://github.com/org1/repo1
+#          ref: refs/heads/6.x
+
+      - name: Run PHP-Prefixer
+        uses: PHP-Prefixer/php-prefixer-build-action@v0.0.6
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          personal_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          project_id: 5532
+          #gh_personal_access_token
+          target_branch:
