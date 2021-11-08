@@ -17,17 +17,14 @@ jobs:
           ref: refs/heads/6.x
           path: illuminate/support
 
-      - name: 'Check'
-        run: |
-          ls -alhR
-
       - name: Run PHP-Prefixer
-        uses: PHP-Prefixer/php-prefixer-build-action@v0.0.6
+        uses: jackstr/php-prefixer-build-action@dev
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           personal_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           project_id: ${{ secrets.PROJECT_ID }}
-          source_dir_path:
+          source_repo: illuminate/support
+          source_dir_path: illuminate/support
           target_branch: 6.x-prefixed
           gh_personal_access_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
