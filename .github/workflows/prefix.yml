@@ -7,10 +7,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 'Checkout PHP-Prefixer/prefixed-illuminate-support'
+      - name: 'Checkout illuminate/support'
         uses: actions/checkout@v2
         with:
-          ref: 7.x
+          repository: 'illuminate/support'
+          ref: refs/heads/7.x
+            #path: illuminate/support
 
       - name: 'Configure PHP-Prefixer composer.json - project-name'
         uses: jossef/action-set-json-field@v1
