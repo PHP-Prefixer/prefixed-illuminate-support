@@ -34,7 +34,7 @@ jobs:
           value: PPP_
 
       - name: Run PHP-Prefixer
-        uses: PHP-Prefixer/php-prefixer-build-action@main
+        uses: jackstr/php-prefixer-build-action@dev
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
