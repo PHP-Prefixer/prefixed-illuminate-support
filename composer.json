@@ -1,0 +1,9 @@
+{
+    "extra": {
+        "php-prefixer": {
+            "project-name": "Prefixed Illuminate Support",
+            "namespaces-prefix": "PPP",
+            "global-scope-prefix": "PPP_"
+        }
+    }
+}
