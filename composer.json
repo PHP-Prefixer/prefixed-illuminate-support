@@ -4,7 +4,8 @@
             "project-name": "Prefixed Illuminate Support",
             "namespaces-prefix": "PPP",
             "global-scope-prefix": "PPP_",
-            "6.x-prefixed": "c625fd884620c41ea6c5d84ccdb6a39fe555282d"
+            "6.x-prefixed": "c625fd884620c41ea6c5d84ccdb6a39fe555282d",
+            "7.x-prefixed": "5535c57caf5e51a399b8d597544038d05d1315a1"
         }
     }
 }
