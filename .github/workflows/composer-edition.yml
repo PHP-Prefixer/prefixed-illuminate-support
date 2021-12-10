@@ -1,6 +1,11 @@
 name: Composer Edition
 
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+    branches:
+      - 6.x
+      - 7.x
+      - 8.x
 
 jobs:
   main:
