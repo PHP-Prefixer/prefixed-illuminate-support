@@ -24,6 +24,7 @@ jobs:
         with:
           ref: 'prefixed-6.x'
           fetch-depth: 0
+          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
       - name: Composer Search and Replace name
         uses: jossef/action-set-json-field@v1
         with:
@@ -54,3 +55,10 @@ jobs:
           file: composer.json
           field: authors.email
           value: anibal.sanchez@php-prefixer.com
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Update composer.json info."
+          git push
