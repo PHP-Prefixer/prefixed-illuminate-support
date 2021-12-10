@@ -1,3 +1,5 @@
+name: PHP-Prefixer for 7.x
+
 on:
   workflow_dispatch:
   schedule:
@@ -8,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run PHP-Prefixer for illuminate/support 7.x
+      - name: Run PHP-Prefixer
         uses: PHP-Prefixer/php-prefixer-build-action@v1.1.0
         with:
           personal_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
