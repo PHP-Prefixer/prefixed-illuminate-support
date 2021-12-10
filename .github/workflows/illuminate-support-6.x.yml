@@ -20,7 +20,9 @@ jobs:
           ref: '6.x'
           schema: >
             {"project-name": "Prefixed Project","namespaces-prefix": "PPP","global-scope-prefix": "PPP_"}
-
+      - uses: actions/checkout@v2
+        with:
+          ref: 'prefixed-6.x'
       - name: Composer Search and Replace name
         uses: jossef/action-set-json-field@v1
         with:
