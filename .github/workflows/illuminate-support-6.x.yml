@@ -23,6 +23,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: 'prefixed-6.x'
+          fetch-depth: 0
       - name: Composer Search and Replace name
         uses: jossef/action-set-json-field@v1
         with:
