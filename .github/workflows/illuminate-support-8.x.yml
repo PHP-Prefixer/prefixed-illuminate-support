@@ -70,11 +70,6 @@ jobs:
           file_path: '${{ github.workspace }}/composer.json'
           field_path: 'support.source'
           field_value: 'https://github.com/PHP-Prefixer/prefixed-illuminate-support'
-      - name: Commit Date Ifier
-        id: transform-json
-        uses: hdmsantander/npm-commit-date-ifier-action@v1.0
-        with:
-          json: ${{ github.workspace }} composer.json
 
       - name: Commit files
         run: |
