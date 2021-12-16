@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # PHP-Prefixer Execution Job
       - name: Run PHP-Prefixer
         uses: PHP-Prefixer/php-prefixer-build-action@v1.1.0
         with:
@@ -20,3 +21,65 @@ jobs:
           ref: '8.x'
           schema: >
             {"project-name": "Prefixed Project","namespaces-prefix": "PPP","global-scope-prefix": "PPP_"}
+
+      # composer.json Edition
+      - uses: actions/checkout@v2
+        with:
+          ref: 'prefixed-6.x'
+          fetch-depth: 0
+          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+      - name: Composer Search and Replace name
+        uses: 898anil/github-actions-json-edit@v0.2
+        with:
+          file_path: '${{ github.workspace }}/composer.json'
+          field_path: 'name'
+          field_value: 'php-prefixer/prefixed-illuminate-support'
+      - name: Composer Search and Replace description
+        uses: 898anil/github-actions-json-edit@v0.2
+        with:
+          file_path: '${{ github.workspace }}/composer.json'
+          field_path: 'description'
+          field_value: 'The Prefixed Illuminate Support package.'
+      - name: Composer Search and Replace description
+        uses: 898anil/github-actions-json-edit@v0.2
+        with:
+          file_path: '${{ github.workspace }}/composer.json'
+          field_path: 'homepage'
+          field_value: 'https://php-prefixer.com'
+      - name: Composer Search and Replace authors.name
+        uses: 898anil/github-actions-json-edit@v0.2
+        with:
+          file_path: '${{ github.workspace }}/composer.json'
+          field_path: 'authors[0].name'
+          field_value: 'Anibal Sanchez'
+      - name: Composer Search and Replace authors.email
+        uses: 898anil/github-actions-json-edit@v0.2
+        with:
+          file_path: '${{ github.workspace }}/composer.json'
+          field_path: 'authors[0].email'
+          field_value: 'anibal.sanchez@php-prefixer.com'
+      - name: Composer Search and Replace support.issues
+        uses: 898anil/github-actions-json-edit@v0.2
+        with:
+          file_path: '${{ github.workspace }}/composer.json'
+          field_path: 'support.issues'
+          field_value: 'https://github.com/PHP-Prefixer/prefixed-illuminate-support/issues'
+      - name: Composer Search and Replace support.source
+        uses: 898anil/github-actions-json-edit@v0.2
+        with:
+          file_path: '${{ github.workspace }}/composer.json'
+          field_path: 'support.source'
+          field_value: 'https://github.com/PHP-Prefixer/prefixed-illuminate-support'
+      - name: Commit Date Ifier
+        id: transform-json
+        uses: hdmsantander/npm-commit-date-ifier-action@v1.0
+        with:
+          json: ${{ env.workspace }} composer.json
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Update composer.json info."
+          git push
