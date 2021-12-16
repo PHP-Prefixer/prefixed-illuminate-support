@@ -74,7 +74,7 @@ jobs:
         id: transform-json
         uses: hdmsantander/npm-commit-date-ifier-action@v1.0
         with:
-          json: ${{ env.workspace }} composer.json
+          json: ${{ github.workspace }} composer.json
 
       - name: Commit files
         run: |
