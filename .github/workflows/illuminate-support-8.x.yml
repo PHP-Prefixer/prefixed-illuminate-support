@@ -25,7 +25,7 @@ jobs:
       # composer.json Edition
       - uses: actions/checkout@v2
         with:
-          ref: 'prefixed-6.x'
+          ref: 'prefixed-8.x'
           fetch-depth: 0
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
       - name: Improve composer.json fields

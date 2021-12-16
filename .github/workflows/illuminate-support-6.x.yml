@@ -28,49 +28,14 @@ jobs:
           ref: 'prefixed-6.x'
           fetch-depth: 0
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-      - name: Composer Search and Replace name
-        uses: 898anil/github-actions-json-edit@v0.2
-        with:
-          file_path: composer.json
-          field_path: name
-          field_value: php-prefixer/prefixed-illuminate-support
-      - name: Composer Search and Replace description
-        uses: 898anil/github-actions-json-edit@v0.2
-        with:
-          file_path: composer.json
-          field_path: description
-          field_value: The Prefixed Illuminate Support package.
-      - name: Composer Search and Replace description
-        uses: 898anil/github-actions-json-edit@v0.2
-        with:
-          file_path: composer.json
-          field_path: homepage
-          field_value: https://php-prefixer.com
-      - name: Composer Search and Replace authors.name
-        uses: 898anil/github-actions-json-edit@v0.2
-        with:
-          file_path: composer.json
-          field_path: authors[0].name
-          field_value: Anibal Sanchez
-      - name: Composer Search and Replace authors.email
-        uses: 898anil/github-actions-json-edit@v0.2
-        with:
-          file_path: composer.json
-          field_path: authors[0].email
-          field_value: anibal.sanchez@php-prefixer.com
-      - name: Composer Search and Replace support.issues
-        uses: 898anil/github-actions-json-edit@v0.2
-        with:
-          file_path: composer.json
-          field_path: support.issues
-          field_value: https://github.com/PHP-Prefixer/prefixed-illuminate-support/issues
-      - name: Composer Search and Replace support.source
-        uses: 898anil/github-actions-json-edit@v0.2
-        with:
-          file_path: composer.json
-          field_path: support.source
-          field_value: https://github.com/PHP-Prefixer/prefixed-illuminate-support
-
+      - name: Improve composer.json fields
+        run: |
+          sed -i 's/illuminate\/support/php-prefixer\/prefixed-illuminate-support/' '${{ github.workspace }}/composer.json'
+          sed -i 's/The Illuminate Support package./The Prefixed Illuminate Support package./' '${{ github.workspace }}/composer.json'
+          sed -i 's/laravel\.com/php-prefixer\.com/' '${{ github.workspace }}/composer.json'
+          sed -i 's/laravel\/framework/PHP-Prefixer\/prefixed-illuminate-support/' '${{ github.workspace }}/composer.json'
+          sed -i 's/Taylor Otwell/Anibal Sanchez/' '${{ github.workspace }}/composer.json'
+          sed -i 's/taylor\@laravel.com/anibal.sanchez@php-prefixer.com/' '${{ github.workspace }}/composer.json'
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
