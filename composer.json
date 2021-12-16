@@ -1,0 +1,21 @@
+{
+    "name": "php-prefixer/prefixed-illuminate-support",
+    "description": "The Prefixed Illuminate Support package.",
+    "homepage": "https://php-prefixer.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anibal Sanchez",
+            "email": "anibal.sanchez@php-prefixer.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {},
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/PHP-Prefixer/prefixed-illuminate-support/issues",
+        "source": "https://github.com/PHP-Prefixer/prefixed-illuminate-support"
+    }
+}
