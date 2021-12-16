@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # PHP-Prefixer Execution Job
       - name: Run PHP-Prefixer
         uses: PHP-Prefixer/php-prefixer-build-action@v1.1.0
         with:
@@ -20,41 +21,56 @@ jobs:
           ref: '6.x'
           schema: >
             {"project-name": "Prefixed Project","namespaces-prefix": "PPP","global-scope-prefix": "PPP_"}
+
+      # composer.json Edition
       - uses: actions/checkout@v2
         with:
           ref: 'prefixed-6.x'
           fetch-depth: 0
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
       - name: Composer Search and Replace name
-        uses: jossef/action-set-json-field@v1
+        uses: deef0000dragon1/json-edit-action/@v1
         with:
           file: composer.json
           field: name
           value: php-prefixer/prefixed-illuminate-support
       - name: Composer Search and Replace description
-        uses: jossef/action-set-json-field@v1
+        uses: deef0000dragon1/json-edit-action/@v1
         with:
           file: composer.json
           field: description
           value: The Prefixed Illuminate Support package.
       - name: Composer Search and Replace description
-        uses: jossef/action-set-json-field@v1
+        uses: deef0000dragon1/json-edit-action/@v1
         with:
           file: composer.json
           field: homepage
           value: https://php-prefixer.com
       - name: Composer Search and Replace authors.name
-        uses: jossef/action-set-json-field@v1
+        uses: deef0000dragon1/json-edit-action/@v1
         with:
           file: composer.json
-          field: authors.name
+          field: authors[0].name
           value: Anibal Sanchez
       - name: Composer Search and Replace authors.email
-        uses: jossef/action-set-json-field@v1
+        uses: deef0000dragon1/json-edit-action/@v1
         with:
           file: composer.json
-          field: authors.email
+          field: authors[0].email
           value: anibal.sanchez@php-prefixer.com
+      - name: Composer Search and Replace support.issues
+        uses: deef0000dragon1/json-edit-action/@v1
+        with:
+          file: composer.json
+          field: support.issues
+          value: https://github.com/PHP-Prefixer/prefixed-illuminate-support/issues
+      - name: Composer Search and Replace support.source
+        uses: deef0000dragon1/json-edit-action/@v1
+        with:
+          file: composer.json
+          field: support.source
+          value: https://github.com/PHP-Prefixer/prefixed-illuminate-support
+
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
