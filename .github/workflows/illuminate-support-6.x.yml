@@ -31,45 +31,45 @@ jobs:
       - name: Composer Search and Replace name
         uses: deef0000dragon1/json-edit-action/@v1
         with:
-          file: composer.json
-          field: name
-          value: php-prefixer/prefixed-illuminate-support
+          KEY: name
+          VALUE: php-prefixer/prefixed-illuminate-support
+          FILE: composer.json
       - name: Composer Search and Replace description
         uses: deef0000dragon1/json-edit-action/@v1
         with:
-          file: composer.json
-          field: description
-          value: The Prefixed Illuminate Support package.
+          KEY: description
+          VALUE: The Prefixed Illuminate Support package.
+          FILE: composer.json
       - name: Composer Search and Replace description
         uses: deef0000dragon1/json-edit-action/@v1
         with:
-          file: composer.json
-          field: homepage
-          value: https://php-prefixer.com
+          KEY: homepage
+          VALUE: https://php-prefixer.com
+          FILE: composer.json
       - name: Composer Search and Replace authors.name
         uses: deef0000dragon1/json-edit-action/@v1
         with:
-          file: composer.json
-          field: authors[0].name
-          value: Anibal Sanchez
+          KEY: authors[0].name
+          VALUE: Anibal Sanchez
+          FILE: composer.json
       - name: Composer Search and Replace authors.email
         uses: deef0000dragon1/json-edit-action/@v1
         with:
-          file: composer.json
-          field: authors[0].email
-          value: anibal.sanchez@php-prefixer.com
+          KEY: authors[0].email
+          VALUE: anibal.sanchez@php-prefixer.com
+          FILE: composer.json
       - name: Composer Search and Replace support.issues
         uses: deef0000dragon1/json-edit-action/@v1
         with:
-          file: composer.json
-          field: support.issues
-          value: https://github.com/PHP-Prefixer/prefixed-illuminate-support/issues
+          KEY: support.issues
+          VALUE: https://github.com/PHP-Prefixer/prefixed-illuminate-support/issues
+          FILE: composer.json
       - name: Composer Search and Replace support.source
         uses: deef0000dragon1/json-edit-action/@v1
         with:
-          file: composer.json
-          field: support.source
-          value: https://github.com/PHP-Prefixer/prefixed-illuminate-support
+          KEY: support.source
+          VALUE: https://github.com/PHP-Prefixer/prefixed-illuminate-support
+          FILE: composer.json
 
       - name: Commit files
         run: |
