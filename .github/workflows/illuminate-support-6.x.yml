@@ -29,47 +29,47 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
       - name: Composer Search and Replace name
-        uses: deef0000dragon1/json-edit-action/@v1
+        uses: 898anil/github-actions-json-edit
         with:
-          KEY: name
-          VALUE: php-prefixer/prefixed-illuminate-support
-          FILE: composer.json
+          file_path: composer.json
+          field_path: name
+          field_value: php-prefixer/prefixed-illuminate-support
       - name: Composer Search and Replace description
-        uses: deef0000dragon1/json-edit-action/@v1
+        uses: 898anil/github-actions-json-edit
         with:
-          KEY: description
-          VALUE: The Prefixed Illuminate Support package.
-          FILE: composer.json
+          file_path: composer.json
+          field_path: description
+          field_value: The Prefixed Illuminate Support package.
       - name: Composer Search and Replace description
-        uses: deef0000dragon1/json-edit-action/@v1
+        uses: 898anil/github-actions-json-edit
         with:
-          KEY: homepage
-          VALUE: https://php-prefixer.com
-          FILE: composer.json
+          file_path: composer.json
+          field_path: homepage
+          field_value: https://php-prefixer.com
       - name: Composer Search and Replace authors.name
-        uses: deef0000dragon1/json-edit-action/@v1
+        uses: 898anil/github-actions-json-edit
         with:
-          KEY: authors[0].name
-          VALUE: Anibal Sanchez
-          FILE: composer.json
+          file_path: composer.json
+          field_path: authors[0].name
+          field_value: Anibal Sanchez
       - name: Composer Search and Replace authors.email
-        uses: deef0000dragon1/json-edit-action/@v1
+        uses: 898anil/github-actions-json-edit
         with:
-          KEY: authors[0].email
-          VALUE: anibal.sanchez@php-prefixer.com
-          FILE: composer.json
+          file_path: composer.json
+          field_path: authors[0].email
+          field_value: anibal.sanchez@php-prefixer.com
       - name: Composer Search and Replace support.issues
-        uses: deef0000dragon1/json-edit-action/@v1
+        uses: 898anil/github-actions-json-edit
         with:
-          KEY: support.issues
-          VALUE: https://github.com/PHP-Prefixer/prefixed-illuminate-support/issues
-          FILE: composer.json
+          file_path: composer.json
+          field_path: support.issues
+          field_value: https://github.com/PHP-Prefixer/prefixed-illuminate-support/issues
       - name: Composer Search and Replace support.source
-        uses: deef0000dragon1/json-edit-action/@v1
+        uses: 898anil/github-actions-json-edit
         with:
-          KEY: support.source
-          VALUE: https://github.com/PHP-Prefixer/prefixed-illuminate-support
-          FILE: composer.json
+          file_path: composer.json
+          field_path: support.source
+          field_value: https://github.com/PHP-Prefixer/prefixed-illuminate-support
 
       - name: Commit files
         run: |
