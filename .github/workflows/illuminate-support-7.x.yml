@@ -36,6 +36,9 @@ jobs:
           sed -i 's/laravel\/framework/PHP-Prefixer\/prefixed-illuminate-support/' '${{ github.workspace }}/composer.json'
           sed -i 's/Taylor Otwell/Anibal Sanchez/' '${{ github.workspace }}/composer.json'
           sed -i 's/taylor.laravel\.com/anibal.sanchez@php-prefixer.com/' '${{ github.workspace }}/composer.json'
+          sed -i 's/branch-alias/php-prefixer/' '${{ github.workspace }}/composer.json'
+          sed -i 's/dev-master/last-build/' '${{ github.workspace }}/composer.json'
+          sed -i "s/[0-9].x-dev/`date`/" '${{ github.workspace }}/composer.json'
       - name: Commit files
         run: |
           git config --local user.email "team@php-prefixer.com"
