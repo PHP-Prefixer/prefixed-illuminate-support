@@ -20,7 +20,7 @@ jobs:
           repository: 'illuminate/support'
           ref: '8.x'
           schema: >
-            {"project-name": "Prefixed Project","namespaces-prefix": "PPP","global-scope-prefix": "PPP_"}
+            {"project-name": "Prefixed Illuminate package","namespaces-prefix": "PPP","global-scope-prefix": "PPP_"}
 
       # composer.json Edition
       - uses: actions/checkout@v2
