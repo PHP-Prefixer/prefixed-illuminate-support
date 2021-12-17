@@ -1,24 +1,24 @@
 {
-    "name": "illuminate/support",
-    "description": "The Illuminate Support package.",
+    "name": "php-prefixer/prefixed-illuminate-support",
+    "description": "The Prefixed Illuminate Support package.",
     "license": "MIT",
-    "homepage": "https://laravel.com",
+    "homepage": "https://php-prefixer.com",
     "support": {
-        "issues": "https://github.com/laravel/framework/issues",
-        "source": "https://github.com/laravel/framework"
+        "issues": "https://github.com/PHP-Prefixer/prefixed-illuminate-support/issues",
+        "source": "https://github.com/PHP-Prefixer/prefixed-illuminate-support"
     },
     "authors": [
         {
-            "name": "Taylor Otwell",
-            "email": "taylor@laravel.com"
+            "name": "Anibal Sanchez",
+            "email": "anibal.sanchez@php-prefixer.com"
         }
     ],
     "conflict": {
         "tightenco/collect": "<5.5.33"
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "7.x-dev"
+        "php-prefixer": {
+            "last-build": "Fri Dec 17 10:23:54 UTC 2021"
         }
     },
     "suggest": {
