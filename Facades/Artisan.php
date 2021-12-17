@@ -1,8 +1,9 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L6\Illuminate\Support\Facades;
 
-use Illuminate\Contracts\Console\Kernel as ConsoleKernelContract;
+use PPP_L6\Illuminate\Contracts\Console\Kernel as ConsoleKernelContract;
 
 /**
  * @method static int handle(\Symfony\Component\Console\Input\InputInterface $input, \Symfony\Component\Console\Output\OutputInterface|null $output = null)

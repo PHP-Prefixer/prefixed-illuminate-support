@@ -1,6 +1,7 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L6\Illuminate\Support\Facades;
 
 /**
  * @method static \Illuminate\Routing\Route fallback(\Closure|array|string|callable|null $action = null)

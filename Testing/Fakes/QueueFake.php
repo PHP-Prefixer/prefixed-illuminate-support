@@ -1,10 +1,11 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L6\Illuminate\Support\Testing\Fakes;
 
 use BadMethodCallException;
-use Illuminate\Contracts\Queue\Queue;
-use Illuminate\Queue\QueueManager;
+use PPP_L6\Illuminate\Contracts\Queue\Queue;
+use PPP_L6\Illuminate\Queue\QueueManager;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class QueueFake extends QueueManager implements Queue

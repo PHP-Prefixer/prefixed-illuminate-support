@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Traits;
+namespace PPP_L6\Illuminate\Support\Traits;
 
-use Illuminate\Contracts\Container\Container;
-use Illuminate\Support\Fluent;
+use PPP_L6\Illuminate\Contracts\Container\Container;
+use PPP_L6\Illuminate\Support\Fluent;
 
 trait CapsuleManagerTrait
 {

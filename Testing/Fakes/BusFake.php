@@ -1,10 +1,11 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L6\Illuminate\Support\Testing\Fakes;
 
 use Closure;
-use Illuminate\Contracts\Bus\Dispatcher;
-use Illuminate\Support\Arr;
+use PPP_L6\Illuminate\Contracts\Bus\Dispatcher;
+use PPP_L6\Illuminate\Support\Arr;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class BusFake implements Dispatcher

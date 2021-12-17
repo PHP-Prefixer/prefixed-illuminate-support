@@ -1,6 +1,7 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L6\Illuminate\Support;
 
 use ReflectionClass;
 use ReflectionMethod;

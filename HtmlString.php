@@ -1,8 +1,9 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L6\Illuminate\Support;
 
-use Illuminate\Contracts\Support\Htmlable;
+use PPP_L6\Illuminate\Contracts\Support\Htmlable;
 
 class HtmlString implements Htmlable
 {

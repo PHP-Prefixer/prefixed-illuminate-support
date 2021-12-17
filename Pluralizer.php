@@ -1,11 +1,12 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L6\Illuminate\Support;
 
-use Doctrine\Inflector\CachedWordInflector;
-use Doctrine\Inflector\Inflector;
-use Doctrine\Inflector\Rules\English;
-use Doctrine\Inflector\RulesetInflector;
+use PPP_L6\Doctrine\Inflector\CachedWordInflector;
+use PPP_L6\Doctrine\Inflector\Inflector;
+use PPP_L6\Doctrine\Inflector\Rules\English;
+use PPP_L6\Doctrine\Inflector\RulesetInflector;
 
 class Pluralizer
 {

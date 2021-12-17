@@ -1,10 +1,11 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L6\Illuminate\Support;
 
-use Illuminate\Console\Application as Artisan;
-use Illuminate\Contracts\Support\DeferrableProvider;
-use Illuminate\Database\Eloquent\Factory as ModelFactory;
+use PPP_L6\Illuminate\Console\Application as Artisan;
+use PPP_L6\Illuminate\Contracts\Support\DeferrableProvider;
+use PPP_L6\Illuminate\Database\Eloquent\Factory as ModelFactory;
 
 abstract class ServiceProvider
 {

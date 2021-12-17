@@ -1,10 +1,11 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L6\Illuminate\Support;
 
-use Illuminate\Filesystem\Filesystem;
-use Symfony\Component\Process\PhpExecutableFinder;
-use Symfony\Component\Process\Process;
+use PPP_L6\Illuminate\Filesystem\Filesystem;
+use PPP_L6\Symfony\Component\Process\PhpExecutableFinder;
+use PPP_L6\Symfony\Component\Process\Process;
 
 class Composer
 {

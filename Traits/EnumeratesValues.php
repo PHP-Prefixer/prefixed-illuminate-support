@@ -1,17 +1,18 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Traits;
+namespace PPP_L6\Illuminate\Support\Traits;
 
 use CachingIterator;
 use Exception;
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\Support\Jsonable;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Enumerable;
-use Illuminate\Support\HigherOrderCollectionProxy;
+use PPP_L6\Illuminate\Contracts\Support\Arrayable;
+use PPP_L6\Illuminate\Contracts\Support\Jsonable;
+use PPP_L6\Illuminate\Support\Arr;
+use PPP_L6\Illuminate\Support\Collection;
+use PPP_L6\Illuminate\Support\Enumerable;
+use PPP_L6\Illuminate\Support\HigherOrderCollectionProxy;
 use JsonSerializable;
-use Symfony\Component\VarDumper\VarDumper;
+use PPP_L6\Symfony\Component\VarDumper\VarDumper;
 use Traversable;
 
 /**

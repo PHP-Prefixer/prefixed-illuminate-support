@@ -1,11 +1,12 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L6\Illuminate\Support\Testing\Fakes;
 
-use Illuminate\Contracts\Mail\Mailable;
-use Illuminate\Contracts\Mail\Mailer;
-use Illuminate\Contracts\Mail\MailQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
+use PPP_L6\Illuminate\Contracts\Mail\Mailable;
+use PPP_L6\Illuminate\Contracts\Mail\Mailer;
+use PPP_L6\Illuminate\Contracts\Mail\MailQueue;
+use PPP_L6\Illuminate\Contracts\Queue\ShouldQueue;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class MailFake implements Mailer, MailQueue

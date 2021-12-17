@@ -1,8 +1,9 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L6\Illuminate\Support\Facades;
 
-use Illuminate\Support\Testing\Fakes\QueueFake;
+use PPP_L6\Illuminate\Support\Testing\Fakes\QueueFake;
 
 /**
  * @method static int size(string $queue = null)

@@ -1,0 +1,23 @@
+<?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
+
+/**
+ * This file is part of the Carbon package.
+ *
+ * (c) Brian Nesbitt <brian@nesbot.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace PPP_L6\Carbon;
+
+use PPP_L6\Symfony\Component\Translation\MessageCatalogueInterface;
+
+/**
+ * Mark translator using strong type from symfony/translation >= 6.
+ */
+interface TranslatorStrongTypeInterface
+{
+    public function getFromCatalogue(MessageCatalogueInterface $catalogue, string $id, string $domain = 'messages');
+}

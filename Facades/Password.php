@@ -1,8 +1,9 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L6\Illuminate\Support\Facades;
 
-use Illuminate\Contracts\Auth\PasswordBroker;
+use PPP_L6\Illuminate\Contracts\Auth\PasswordBroker;
 
 /**
  * @method static string sendResetLink(array $credentials)

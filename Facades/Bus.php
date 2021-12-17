@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L6\Illuminate\Support\Facades;
 
-use Illuminate\Contracts\Bus\Dispatcher as BusDispatcherContract;
-use Illuminate\Support\Testing\Fakes\BusFake;
+use PPP_L6\Illuminate\Contracts\Bus\Dispatcher as BusDispatcherContract;
+use PPP_L6\Illuminate\Support\Testing\Fakes\BusFake;
 
 /**
  * @method static mixed dispatch($command)
