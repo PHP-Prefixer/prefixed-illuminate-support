@@ -1,0 +1,14 @@
+{
+    "require": {
+        "php-prefixer/prefixed-illuminate-support": "dev-prefixed-8.x"
+    },
+    "config": {
+        "vendor-dir": "vendor_laravel_8"
+    },
+    "repositories": [
+        {
+          "type": "git",
+          "url": "git@github.com:php-prefixer/prefixed-illuminate-support.git"
+        }
+    ]
+}

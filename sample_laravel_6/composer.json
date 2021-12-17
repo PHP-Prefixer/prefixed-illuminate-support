@@ -1,0 +1,11 @@
+{
+    "require": {
+        "php-prefixer/prefixed-illuminate-support": "dev-prefixed-6.x"
+    },
+    "repositories": [
+        {
+          "type": "git",
+          "url": "git@github.com:php-prefixer/prefixed-illuminate-support.git"
+        }
+    ]
+}
