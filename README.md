@@ -88,4 +88,4 @@ Collection::make([$immutableDate])->each(function ($date) {
 
 ## License
 
-MIT License Copyright (c) 2021 PHP-Prefixer
+MIT License Copyright (c) 2021 PHP-Prefixer.
