@@ -44,7 +44,7 @@ jobs:
         run: |
           git config --local user.email "team@php-prefixer.com"
           git config --local user.name "PHP-Prefixer DevOps"
-          export CHANGED = $(git status --porcelain)
+          export CHANGED=$(git status --porcelain)
           [ -n "${CHANGED}" ] && git add -A
           [ -n "${CHANGED}" ] && git commit -m "Update composer.json info."
           [ -n "${CHANGED}" ] && git push
