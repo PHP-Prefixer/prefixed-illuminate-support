@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L8\Illuminate\Support;
 
 use ArrayIterator;
-use Illuminate\Contracts\Support\ValidatedData;
+use PPP_L8\Illuminate\Contracts\Support\ValidatedData;
 use stdClass;
 
 class ValidatedInput implements ValidatedData
@@ -41,7 +42,7 @@ class ValidatedInput implements ValidatedData
         $placeholder = new stdClass;
 
         foreach (is_array($keys) ? $keys : func_get_args() as $key) {
-            $value = data_get($input, $key, $placeholder);
+            $value = PPP_L8_data_get($input, $key, $placeholder);
 
             if ($value !== $placeholder) {
                 Arr::set($results, $key, $value);

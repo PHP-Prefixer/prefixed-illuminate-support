@@ -1,11 +1,12 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L8\Illuminate\Support;
 
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\Support\Jsonable;
-use Illuminate\Contracts\Support\MessageBag as MessageBagContract;
-use Illuminate\Contracts\Support\MessageProvider;
+use PPP_L8\Illuminate\Contracts\Support\Arrayable;
+use PPP_L8\Illuminate\Contracts\Support\Jsonable;
+use PPP_L8\Illuminate\Contracts\Support\MessageBag as MessageBagContract;
+use PPP_L8\Illuminate\Contracts\Support\MessageProvider;
 use JsonSerializable;
 
 class MessageBag implements Jsonable, JsonSerializable, MessageBagContract, MessageProvider
@@ -209,7 +210,7 @@ class MessageBag implements Jsonable, JsonSerializable, MessageBagContract, Mess
      */
     protected function getMessagesForWildcardKey($key, $format)
     {
-        return collect($this->messages)
+        return PPP_L8_collect($this->messages)
                 ->filter(function ($messages, $messageKey) use ($key) {
                     return Str::is($key, $messageKey);
                 })
@@ -260,7 +261,7 @@ class MessageBag implements Jsonable, JsonSerializable, MessageBagContract, Mess
      */
     protected function transform($messages, $format, $messageKey)
     {
-        return collect((array) $messages)
+        return PPP_L8_collect((array) $messages)
             ->map(function ($message) use ($format, $messageKey) {
                 // We will simply spin through the given messages and transform each one
                 // replacing the :message place holder with the real message allowing

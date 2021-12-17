@@ -1,17 +1,18 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L8\Illuminate\Support\Testing\Fakes;
 
 use Closure;
 use Exception;
-use Illuminate\Contracts\Notifications\Dispatcher as NotificationDispatcher;
-use Illuminate\Contracts\Notifications\Factory as NotificationFactory;
-use Illuminate\Contracts\Translation\HasLocalePreference;
-use Illuminate\Notifications\AnonymousNotifiable;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Str;
-use Illuminate\Support\Traits\Macroable;
-use Illuminate\Support\Traits\ReflectsClosures;
+use PPP_L8\Illuminate\Contracts\Notifications\Dispatcher as NotificationDispatcher;
+use PPP_L8\Illuminate\Contracts\Notifications\Factory as NotificationFactory;
+use PPP_L8\Illuminate\Contracts\Translation\HasLocalePreference;
+use PPP_L8\Illuminate\Notifications\AnonymousNotifiable;
+use PPP_L8\Illuminate\Support\Collection;
+use PPP_L8\Illuminate\Support\Str;
+use PPP_L8\Illuminate\Support\Traits\Macroable;
+use PPP_L8\Illuminate\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class NotificationFake implements NotificationDispatcher, NotificationFactory
@@ -167,7 +168,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
      */
     public function assertSentTimes($notification, $expectedCount)
     {
-        $actualCount = collect($this->notifications)
+        $actualCount = PPP_L8_collect($this->notifications)
             ->flatten(1)
             ->reduce(function ($count, $sent) use ($notification) {
                 return $count + count($sent[$notification] ?? []);
@@ -204,14 +205,14 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
     public function sent($notifiable, $notification, $callback = null)
     {
         if (! $this->hasSent($notifiable, $notification)) {
-            return collect();
+            return PPP_L8_collect();
         }
 
         $callback = $callback ?: function () {
             return true;
         };
 
-        $notifications = collect($this->notificationsFor($notifiable, $notification));
+        $notifications = PPP_L8_collect($this->notificationsFor($notifiable, $notification));
 
         return $notifications->filter(function ($arguments) use ($callback) {
             return $callback(...array_values($arguments));
@@ -292,7 +293,7 @@ class NotificationFake implements NotificationDispatcher, NotificationFactory
                 'notification' => $notification,
                 'channels' => $notifiableChannels,
                 'notifiable' => $notifiable,
-                'locale' => $notification->locale ?? $this->locale ?? value(function () use ($notifiable) {
+                'locale' => $notification->locale ?? $this->locale ?? PPP_L8_value(function () use ($notifiable) {
                     if ($notifiable instanceof HasLocalePreference) {
                         return $notifiable->preferredLocale();
                     }

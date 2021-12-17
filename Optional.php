@@ -1,10 +1,11 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L8\Illuminate\Support;
 
 use ArrayAccess;
 use ArrayObject;
-use Illuminate\Support\Traits\Macroable;
+use PPP_L8\Illuminate\Support\Traits\Macroable;
 
 class Optional implements ArrayAccess
 {

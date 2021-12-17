@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L8\Illuminate\Support\Testing\Fakes;
 
-use Illuminate\Bus\PendingBatch;
-use Illuminate\Support\Collection;
+use PPP_L8\Illuminate\Bus\PendingBatch;
+use PPP_L8\Illuminate\Support\Collection;
 
 class PendingBatchFake extends PendingBatch
 {

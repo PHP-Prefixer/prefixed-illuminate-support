@@ -1,14 +1,15 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L8\Illuminate\Support\Testing\Fakes;
 
 use Closure;
-use Illuminate\Contracts\Mail\Factory;
-use Illuminate\Contracts\Mail\Mailable;
-use Illuminate\Contracts\Mail\Mailer;
-use Illuminate\Contracts\Mail\MailQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Traits\ReflectsClosures;
+use PPP_L8\Illuminate\Contracts\Mail\Factory;
+use PPP_L8\Illuminate\Contracts\Mail\Mailable;
+use PPP_L8\Illuminate\Contracts\Mail\Mailer;
+use PPP_L8\Illuminate\Contracts\Mail\MailQueue;
+use PPP_L8\Illuminate\Contracts\Queue\ShouldQueue;
+use PPP_L8\Illuminate\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class MailFake implements Factory, Mailer, MailQueue
@@ -128,7 +129,7 @@ class MailFake implements Factory, Mailer, MailQueue
      */
     public function assertNothingSent()
     {
-        $mailableNames = collect($this->mailables)->map(function ($mailable) {
+        $mailableNames = PPP_L8_collect($this->mailables)->map(function ($mailable) {
             return get_class($mailable);
         })->join(', ');
 
@@ -197,7 +198,7 @@ class MailFake implements Factory, Mailer, MailQueue
      */
     public function assertNothingQueued()
     {
-        $mailableNames = collect($this->queuedMailables)->map(function ($mailable) {
+        $mailableNames = PPP_L8_collect($this->queuedMailables)->map(function ($mailable) {
             return get_class($mailable);
         })->join(', ');
 
@@ -216,7 +217,7 @@ class MailFake implements Factory, Mailer, MailQueue
         [$mailable, $callback] = $this->prepareMailableAndCallback($mailable, $callback);
 
         if (! $this->hasSent($mailable)) {
-            return collect();
+            return PPP_L8_collect();
         }
 
         $callback = $callback ?: function () {
@@ -251,7 +252,7 @@ class MailFake implements Factory, Mailer, MailQueue
         [$mailable, $callback] = $this->prepareMailableAndCallback($mailable, $callback);
 
         if (! $this->hasQueued($mailable)) {
-            return collect();
+            return PPP_L8_collect();
         }
 
         $callback = $callback ?: function () {
@@ -282,7 +283,7 @@ class MailFake implements Factory, Mailer, MailQueue
      */
     protected function mailablesOf($type)
     {
-        return collect($this->mailables)->filter(function ($mailable) use ($type) {
+        return PPP_L8_collect($this->mailables)->filter(function ($mailable) use ($type) {
             return $mailable instanceof $type;
         });
     }
@@ -295,7 +296,7 @@ class MailFake implements Factory, Mailer, MailQueue
      */
     protected function queuedMailablesOf($type)
     {
-        return collect($this->queuedMailables)->filter(function ($mailable) use ($type) {
+        return PPP_L8_collect($this->queuedMailables)->filter(function ($mailable) use ($type) {
             return $mailable instanceof $type;
         });
     }

@@ -1,6 +1,7 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L8\Illuminate\Support;
 
 use Dotenv\Repository\Adapter\PutenvAdapter;
 use Dotenv\Repository\RepositoryBuilder;
@@ -97,7 +98,7 @@ class Env
                 return $value;
             })
             ->getOrCall(function () use ($default) {
-                return value($default);
+                return PPP_L8_value($default);
             });
     }
 }

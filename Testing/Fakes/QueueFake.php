@@ -1,12 +1,13 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L8\Illuminate\Support\Testing\Fakes;
 
 use BadMethodCallException;
 use Closure;
-use Illuminate\Contracts\Queue\Queue;
-use Illuminate\Queue\QueueManager;
-use Illuminate\Support\Traits\ReflectsClosures;
+use PPP_L8\Illuminate\Contracts\Queue\Queue;
+use PPP_L8\Illuminate\Queue\QueueManager;
+use PPP_L8\Illuminate\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class QueueFake extends QueueManager implements Queue
@@ -99,7 +100,7 @@ class QueueFake extends QueueManager implements Queue
         );
 
         PHPUnit::assertTrue(
-            collect($expectedChain)->isNotEmpty(),
+            PPP_L8_collect($expectedChain)->isNotEmpty(),
             'The expected chain can not be empty.'
         );
 
@@ -135,7 +136,7 @@ class QueueFake extends QueueManager implements Queue
      */
     protected function assertPushedWithChainOfObjects($job, $expectedChain, $callback)
     {
-        $chain = collect($expectedChain)->map(function ($job) {
+        $chain = PPP_L8_collect($expectedChain)->map(function ($job) {
             return serialize($job);
         })->all();
 
@@ -158,7 +159,7 @@ class QueueFake extends QueueManager implements Queue
     protected function assertPushedWithChainOfClasses($job, $expectedChain, $callback)
     {
         $matching = $this->pushed($job, $callback)->map->chained->map(function ($chain) {
-            return collect($chain)->map(function ($job) {
+            return PPP_L8_collect($chain)->map(function ($job) {
                 return get_class(unserialize($job));
             });
         })->filter(function ($chain) use ($expectedChain) {
@@ -178,7 +179,7 @@ class QueueFake extends QueueManager implements Queue
      */
     protected function isChainOfObjects($chain)
     {
-        return ! collect($chain)->contains(function ($job) {
+        return ! PPP_L8_collect($chain)->contains(function ($job) {
             return ! is_object($job);
         });
     }
@@ -222,14 +223,14 @@ class QueueFake extends QueueManager implements Queue
     public function pushed($job, $callback = null)
     {
         if (! $this->hasPushed($job)) {
-            return collect();
+            return PPP_L8_collect();
         }
 
         $callback = $callback ?: function () {
             return true;
         };
 
-        return collect($this->jobs[$job])->filter(function ($data) use ($callback) {
+        return PPP_L8_collect($this->jobs[$job])->filter(function ($data) use ($callback) {
             return $callback($data['job'], $data['queue']);
         })->pluck('job');
     }
@@ -264,7 +265,7 @@ class QueueFake extends QueueManager implements Queue
      */
     public function size($queue = null)
     {
-        return collect($this->jobs)->flatten(1)->filter(function ($job) use ($queue) {
+        return PPP_L8_collect($this->jobs)->flatten(1)->filter(function ($job) use ($queue) {
             return $job['queue'] === $queue;
         })->count();
     }

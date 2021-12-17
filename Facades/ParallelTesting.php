@@ -1,6 +1,7 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L8\Illuminate\Support\Facades;
 
 /**
  * @method static void setUpProcess(callable $callback)
@@ -21,6 +22,6 @@ class ParallelTesting extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return \Illuminate\Testing\ParallelTesting::class;
+        return \PPP_L8\Illuminate\Testing\ParallelTesting::class;
     }
 }

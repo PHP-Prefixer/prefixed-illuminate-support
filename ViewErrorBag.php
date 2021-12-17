@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L8\Illuminate\Support;
 
 use Countable;
-use Illuminate\Contracts\Support\MessageBag as MessageBagContract;
+use PPP_L8\Illuminate\Contracts\Support\MessageBag as MessageBagContract;
 
 /**
  * @mixin \Illuminate\Contracts\Support\MessageBag

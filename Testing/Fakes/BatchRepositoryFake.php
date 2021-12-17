@@ -1,15 +1,16 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L8\Illuminate\Support\Testing\Fakes;
 
-use Carbon\CarbonImmutable;
+use PPP_L8\Carbon\CarbonImmutable;
 use Closure;
-use Illuminate\Bus\Batch;
-use Illuminate\Bus\BatchRepository;
-use Illuminate\Bus\PendingBatch;
-use Illuminate\Bus\UpdatedBatchJobCounts;
-use Illuminate\Support\Facades\Facade;
-use Illuminate\Support\Str;
+use PPP_L8\Illuminate\Bus\Batch;
+use PPP_L8\Illuminate\Bus\BatchRepository;
+use PPP_L8\Illuminate\Bus\PendingBatch;
+use PPP_L8\Illuminate\Bus\UpdatedBatchJobCounts;
+use PPP_L8\Illuminate\Support\Facades\Facade;
+use PPP_L8\Illuminate\Support\Str;
 
 class BatchRepositoryFake implements BatchRepository
 {

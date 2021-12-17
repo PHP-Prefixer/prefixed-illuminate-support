@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L8\Illuminate\Support\Facades;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Testing\Fakes\EventFake;
+use PPP_L8\Illuminate\Database\Eloquent\Model;
+use PPP_L8\Illuminate\Support\Testing\Fakes\EventFake;
 
 /**
  * @method static \Closure createClassListener(string $listener, bool $wildcard = false)

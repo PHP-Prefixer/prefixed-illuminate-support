@@ -1,10 +1,11 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L8\Illuminate\Support\Testing\Fakes;
 
 use Closure;
-use Illuminate\Foundation\Bus\PendingChain;
-use Illuminate\Queue\CallQueuedClosure;
+use PPP_L8\Illuminate\Foundation\Bus\PendingChain;
+use PPP_L8\Illuminate\Queue\CallQueuedClosure;
 
 class PendingChainFake extends PendingChain
 {

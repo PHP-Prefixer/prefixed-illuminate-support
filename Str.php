@@ -1,14 +1,15 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L8\Illuminate\Support;
 
-use Illuminate\Support\Traits\Macroable;
+use PPP_L8\Illuminate\Support\Traits\Macroable;
 use League\CommonMark\GithubFlavoredMarkdownConverter;
 use Ramsey\Uuid\Codec\TimestampFirstCombCodec;
 use Ramsey\Uuid\Generator\CombGenerator;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidFactory;
-use voku\helper\ASCII;
+use PPP_L8\voku\helper\ASCII;
 
 class Str
 {
@@ -460,10 +461,10 @@ class Str
         preg_match_all($pattern, $subject, $matches);
 
         if (empty($matches[0])) {
-            return collect();
+            return PPP_L8_collect();
         }
 
-        return collect($matches[1] ?? $matches[0]);
+        return PPP_L8_collect($matches[1] ?? $matches[0]);
     }
 
     /**

@@ -1,14 +1,15 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L8\Illuminate\Support;
 
 use Closure;
-use Illuminate\Console\Application as Artisan;
-use Illuminate\Contracts\Foundation\CachesConfiguration;
-use Illuminate\Contracts\Foundation\CachesRoutes;
-use Illuminate\Contracts\Support\DeferrableProvider;
-use Illuminate\Database\Eloquent\Factory as ModelFactory;
-use Illuminate\View\Compilers\BladeCompiler;
+use PPP_L8\Illuminate\Console\Application as Artisan;
+use PPP_L8\Illuminate\Contracts\Foundation\CachesConfiguration;
+use PPP_L8\Illuminate\Contracts\Foundation\CachesRoutes;
+use PPP_L8\Illuminate\Contracts\Support\DeferrableProvider;
+use PPP_L8\Illuminate\Database\Eloquent\Factory as ModelFactory;
+use PPP_L8\Illuminate\View\Compilers\BladeCompiler;
 
 abstract class ServiceProvider
 {
@@ -329,7 +330,7 @@ abstract class ServiceProvider
             return $paths;
         }
 
-        return collect(static::$publishes)->reduce(function ($paths, $p) {
+        return PPP_L8_collect(static::$publishes)->reduce(function ($paths, $p) {
             return array_merge($paths, $p);
         }, []);
     }

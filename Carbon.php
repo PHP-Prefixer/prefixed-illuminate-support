@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L8\Illuminate\Support;
 
-use Carbon\Carbon as BaseCarbon;
-use Carbon\CarbonImmutable as BaseCarbonImmutable;
+use PPP_L8\Carbon\Carbon as BaseCarbon;
+use PPP_L8\Carbon\CarbonImmutable as BaseCarbonImmutable;
 
 class Carbon extends BaseCarbon
 {

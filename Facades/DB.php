@@ -1,6 +1,7 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L8\Illuminate\Support\Facades;
 
 /**
  * @method static \Doctrine\DBAL\Driver\PDOConnection getPdo()

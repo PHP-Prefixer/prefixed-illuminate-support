@@ -1,13 +1,14 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L8\Illuminate\Support\Testing\Fakes;
 
 use Closure;
-use Illuminate\Bus\PendingBatch;
-use Illuminate\Contracts\Bus\QueueingDispatcher;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Traits\ReflectsClosures;
+use PPP_L8\Illuminate\Bus\PendingBatch;
+use PPP_L8\Illuminate\Contracts\Bus\QueueingDispatcher;
+use PPP_L8\Illuminate\Support\Arr;
+use PPP_L8\Illuminate\Support\Collection;
+use PPP_L8\Illuminate\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class BusFake implements QueueingDispatcher
@@ -295,7 +296,7 @@ class BusFake implements QueueingDispatcher
         );
 
         PHPUnit::assertTrue(
-            collect($expectedChain)->isNotEmpty(),
+            PPP_L8_collect($expectedChain)->isNotEmpty(),
             'The expected chain can not be empty.'
         );
 
@@ -351,7 +352,7 @@ class BusFake implements QueueingDispatcher
      */
     protected function assertDispatchedWithChainOfObjects($command, $expectedChain, $callback)
     {
-        $chain = collect($expectedChain)->map(function ($job) {
+        $chain = PPP_L8_collect($expectedChain)->map(function ($job) {
             return serialize($job);
         })->all();
 
@@ -374,7 +375,7 @@ class BusFake implements QueueingDispatcher
     protected function assertDispatchedWithChainOfClasses($command, $expectedChain, $callback)
     {
         $matching = $this->dispatched($command, $callback)->map->chained->map(function ($chain) {
-            return collect($chain)->map(function ($job) {
+            return PPP_L8_collect($chain)->map(function ($job) {
                 return get_class(unserialize($job));
             });
         })->filter(function ($chain) use ($expectedChain) {
@@ -394,7 +395,7 @@ class BusFake implements QueueingDispatcher
      */
     protected function isChainOfObjects($chain)
     {
-        return ! collect($chain)->contains(function ($job) {
+        return ! PPP_L8_collect($chain)->contains(function ($job) {
             return ! is_object($job);
         });
     }
@@ -423,14 +424,14 @@ class BusFake implements QueueingDispatcher
     public function dispatched($command, $callback = null)
     {
         if (! $this->hasDispatched($command)) {
-            return collect();
+            return PPP_L8_collect();
         }
 
         $callback = $callback ?: function () {
             return true;
         };
 
-        return collect($this->commands[$command])->filter(function ($command) use ($callback) {
+        return PPP_L8_collect($this->commands[$command])->filter(function ($command) use ($callback) {
             return $callback($command);
         });
     }
@@ -445,14 +446,14 @@ class BusFake implements QueueingDispatcher
     public function dispatchedSync(string $command, $callback = null)
     {
         if (! $this->hasDispatchedSync($command)) {
-            return collect();
+            return PPP_L8_collect();
         }
 
         $callback = $callback ?: function () {
             return true;
         };
 
-        return collect($this->commandsSync[$command])->filter(function ($command) use ($callback) {
+        return PPP_L8_collect($this->commandsSync[$command])->filter(function ($command) use ($callback) {
             return $callback($command);
         });
     }
@@ -467,14 +468,14 @@ class BusFake implements QueueingDispatcher
     public function dispatchedAfterResponse(string $command, $callback = null)
     {
         if (! $this->hasDispatchedAfterResponse($command)) {
-            return collect();
+            return PPP_L8_collect();
         }
 
         $callback = $callback ?: function () {
             return true;
         };
 
-        return collect($this->commandsAfterResponse[$command])->filter(function ($command) use ($callback) {
+        return PPP_L8_collect($this->commandsAfterResponse[$command])->filter(function ($command) use ($callback) {
             return $callback($command);
         });
     }
@@ -488,10 +489,10 @@ class BusFake implements QueueingDispatcher
     public function batched(callable $callback)
     {
         if (empty($this->batches)) {
-            return collect();
+            return PPP_L8_collect();
         }
 
-        return collect($this->batches)->filter(function ($batch) use ($callback) {
+        return PPP_L8_collect($this->batches)->filter(function ($batch) use ($callback) {
             return $callback($batch);
         });
     }
@@ -668,7 +669,7 @@ class BusFake implements QueueingDispatcher
             return true;
         }
 
-        return collect($this->jobsToFake)
+        return PPP_L8_collect($this->jobsToFake)
             ->filter(function ($job) use ($command) {
                 return $job instanceof Closure
                             ? $job($command)

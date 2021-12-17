@@ -1,8 +1,9 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L8\Illuminate\Support\Facades;
 
-use Illuminate\Contracts\Auth\Access\Gate as GateContract;
+use PPP_L8\Illuminate\Contracts\Auth\Access\Gate as GateContract;
 
 /**
  * @method static \Illuminate\Auth\Access\Gate guessPolicyNamesUsing(callable $callback)

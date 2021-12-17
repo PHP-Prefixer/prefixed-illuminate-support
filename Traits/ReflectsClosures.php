@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Traits;
+namespace PPP_L8\Illuminate\Support\Traits;
 
 use Closure;
-use Illuminate\Support\Reflector;
+use PPP_L8\Illuminate\Support\Reflector;
 use ReflectionFunction;
 use RuntimeException;
 
@@ -46,7 +47,7 @@ trait ReflectsClosures
     {
         $reflection = new ReflectionFunction($closure);
 
-        $types = collect($reflection->getParameters())->mapWithKeys(function ($parameter) {
+        $types = PPP_L8_collect($reflection->getParameters())->mapWithKeys(function ($parameter) {
             if ($parameter->isVariadic()) {
                 return [$parameter->getName() => null];
             }
@@ -77,7 +78,7 @@ trait ReflectsClosures
     {
         $reflection = new ReflectionFunction($closure);
 
-        return collect($reflection->getParameters())->mapWithKeys(function ($parameter) {
+        return PPP_L8_collect($reflection->getParameters())->mapWithKeys(function ($parameter) {
             if ($parameter->isVariadic()) {
                 return [$parameter->getName() => null];
             }

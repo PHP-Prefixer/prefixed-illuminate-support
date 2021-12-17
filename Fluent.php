@@ -1,10 +1,11 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L8\Illuminate\Support;
 
 use ArrayAccess;
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\Support\Jsonable;
+use PPP_L8\Illuminate\Contracts\Support\Arrayable;
+use PPP_L8\Illuminate\Contracts\Support\Jsonable;
 use JsonSerializable;
 
 class Fluent implements Arrayable, ArrayAccess, Jsonable, JsonSerializable
@@ -42,7 +43,7 @@ class Fluent implements Arrayable, ArrayAccess, Jsonable, JsonSerializable
             return $this->attributes[$key];
         }
 
-        return value($default);
+        return PPP_L8_value($default);
     }
 
     /**

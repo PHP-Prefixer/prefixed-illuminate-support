@@ -1,6 +1,7 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L8\Illuminate\Support\Facades;
 
 /**
  * @method static \Illuminate\Cache\RateLimiter for(string $name, \Closure $callback)
@@ -25,6 +26,6 @@ class RateLimiter extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Illuminate\Cache\RateLimiter';
+        return 'PPP_L8\Illuminate\Cache\RateLimiter';
     }
 }

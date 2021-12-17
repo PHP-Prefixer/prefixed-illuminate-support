@@ -1,11 +1,12 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-use Illuminate\Contracts\Support\DeferringDisplayableValue;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Env;
-use Illuminate\Support\HigherOrderTapProxy;
-use Illuminate\Support\Optional;
+use PPP_L8\Illuminate\Contracts\Support\DeferringDisplayableValue;
+use PPP_L8\Illuminate\Contracts\Support\Htmlable;
+use PPP_L8\Illuminate\Support\Arr;
+use PPP_L8\Illuminate\Support\Env;
+use PPP_L8\Illuminate\Support\HigherOrderTapProxy;
+use PPP_L8\Illuminate\Support\Optional;
 
 if (! function_exists('append_config')) {
     /**
@@ -163,7 +164,7 @@ if (! function_exists('object_get')) {
 
         foreach (explode('.', $key) as $segment) {
             if (! is_object($object) || ! isset($object->{$segment})) {
-                return value($default);
+                return PPP_L8_value($default);
             }
 
             $object = $object->{$segment};
@@ -238,7 +239,7 @@ if (! function_exists('retry')) {
             }
 
             if ($sleepMilliseconds) {
-                usleep(value($sleepMilliseconds, $attempts) * 1000);
+                usleep(PPP_L8_value($sleepMilliseconds, $attempts) * 1000);
             }
 
             goto beginning;

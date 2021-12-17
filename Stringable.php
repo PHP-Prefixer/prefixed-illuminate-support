@@ -1,13 +1,14 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L8\Illuminate\Support;
 
 use Closure;
-use Illuminate\Support\Traits\Conditionable;
-use Illuminate\Support\Traits\Macroable;
-use Illuminate\Support\Traits\Tappable;
+use PPP_L8\Illuminate\Support\Traits\Conditionable;
+use PPP_L8\Illuminate\Support\Traits\Macroable;
+use PPP_L8\Illuminate\Support\Traits\Tappable;
 use JsonSerializable;
-use Symfony\Component\VarDumper\VarDumper;
+use PPP_L8\Symfony\Component\VarDumper\VarDumper;
 
 class Stringable implements JsonSerializable
 {
@@ -204,7 +205,7 @@ class Stringable implements JsonSerializable
      */
     public function explode($delimiter, $limit = PHP_INT_MAX)
     {
-        return collect(explode($delimiter, $this->value, $limit));
+        return PPP_L8_collect(explode($delimiter, $this->value, $limit));
     }
 
     /**
@@ -218,12 +219,12 @@ class Stringable implements JsonSerializable
     public function split($pattern, $limit = -1, $flags = 0)
     {
         if (filter_var($pattern, FILTER_VALIDATE_INT) !== false) {
-            return collect(mb_str_split($this->value, $pattern));
+            return PPP_L8_collect(mb_str_split($this->value, $pattern));
         }
 
         $segments = preg_split($pattern, $this->value, $limit, $flags);
 
-        return ! empty($segments) ? collect($segments) : collect();
+        return ! empty($segments) ? PPP_L8_collect($segments) : PPP_L8_collect();
     }
 
     /**

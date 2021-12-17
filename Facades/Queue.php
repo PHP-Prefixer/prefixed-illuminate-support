@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L8\Illuminate\Support\Facades;
 
-use Illuminate\Queue\Worker;
-use Illuminate\Support\Testing\Fakes\QueueFake;
+use PPP_L8\Illuminate\Queue\Worker;
+use PPP_L8\Illuminate\Support\Testing\Fakes\QueueFake;
 
 /**
  * @method static \Illuminate\Contracts\Queue\Job|null pop(string $queue = null)

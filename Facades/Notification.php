@@ -1,10 +1,11 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L8\Illuminate\Support\Facades;
 
-use Illuminate\Notifications\AnonymousNotifiable;
-use Illuminate\Notifications\ChannelManager;
-use Illuminate\Support\Testing\Fakes\NotificationFake;
+use PPP_L8\Illuminate\Notifications\AnonymousNotifiable;
+use PPP_L8\Illuminate\Notifications\ChannelManager;
+use PPP_L8\Illuminate\Support\Testing\Fakes\NotificationFake;
 
 /**
  * @method static \Illuminate\Notifications\ChannelManager locale(string|null $locale)
