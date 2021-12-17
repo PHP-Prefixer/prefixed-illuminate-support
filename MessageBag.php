@@ -1,12 +1,13 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L7\Illuminate\Support;
 
 use Countable;
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\Support\Jsonable;
-use Illuminate\Contracts\Support\MessageBag as MessageBagContract;
-use Illuminate\Contracts\Support\MessageProvider;
+use PPP_L7\Illuminate\Contracts\Support\Arrayable;
+use PPP_L7\Illuminate\Contracts\Support\Jsonable;
+use PPP_L7\Illuminate\Contracts\Support\MessageBag as MessageBagContract;
+use PPP_L7\Illuminate\Contracts\Support\MessageProvider;
 use JsonSerializable;
 
 class MessageBag implements Arrayable, Countable, Jsonable, JsonSerializable, MessageBagContract, MessageProvider

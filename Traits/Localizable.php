@@ -1,8 +1,9 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Traits;
+namespace PPP_L7\Illuminate\Support\Traits;
 
-use Illuminate\Container\Container;
+use PPP_L7\Illuminate\Container\Container;
 
 trait Localizable
 {

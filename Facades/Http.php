@@ -1,8 +1,9 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L7\Illuminate\Support\Facades;
 
-use Illuminate\Http\Client\Factory;
+use PPP_L7\Illuminate\Http\Client\Factory;
 
 /**
  * @method static \GuzzleHttp\Promise\PromiseInterface response($body = null, $status = 200, $headers = [])

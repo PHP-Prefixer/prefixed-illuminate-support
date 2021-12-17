@@ -1,8 +1,9 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L7\Illuminate\Support\Facades;
 
-use Illuminate\Contracts\Broadcasting\Factory as BroadcastingFactoryContract;
+use PPP_L7\Illuminate\Contracts\Broadcasting\Factory as BroadcastingFactoryContract;
 
 /**
  * @method static \Illuminate\Broadcasting\Broadcasters\Broadcaster channel(string $channel, callable|string  $callback, array $options = [])

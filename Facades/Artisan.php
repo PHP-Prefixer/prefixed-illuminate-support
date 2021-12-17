@@ -1,8 +1,9 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L7\Illuminate\Support\Facades;
 
-use Illuminate\Contracts\Console\Kernel as ConsoleKernelContract;
+use PPP_L7\Illuminate\Contracts\Console\Kernel as ConsoleKernelContract;
 
 /**
  * @method static \Illuminate\Foundation\Bus\PendingDispatch queue(string $command, array $parameters = [])

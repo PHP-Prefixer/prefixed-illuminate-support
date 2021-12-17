@@ -1,6 +1,7 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L7\Illuminate\Support;
 
 /**
  * ProcessUtils is a bunch of utility methods.

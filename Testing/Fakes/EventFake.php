@@ -1,11 +1,12 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L7\Illuminate\Support\Testing\Fakes;
 
 use Closure;
-use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Traits\ReflectsClosures;
+use PPP_L7\Illuminate\Contracts\Events\Dispatcher;
+use PPP_L7\Illuminate\Support\Arr;
+use PPP_L7\Illuminate\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class EventFake implements Dispatcher

@@ -1,11 +1,12 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L7\Illuminate\Support;
 
 use ArrayAccess;
 use ArrayIterator;
-use Illuminate\Support\Traits\EnumeratesValues;
-use Illuminate\Support\Traits\Macroable;
+use PPP_L7\Illuminate\Support\Traits\EnumeratesValues;
+use PPP_L7\Illuminate\Support\Traits\Macroable;
 use stdClass;
 
 class Collection implements ArrayAccess, Enumerable

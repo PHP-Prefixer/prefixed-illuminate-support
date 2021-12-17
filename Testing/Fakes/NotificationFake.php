@@ -1,16 +1,17 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace PPP_L7\Illuminate\Support\Testing\Fakes;
 
 use Closure;
 use Exception;
-use Illuminate\Contracts\Notifications\Dispatcher as NotificationDispatcher;
-use Illuminate\Contracts\Notifications\Factory as NotificationFactory;
-use Illuminate\Contracts\Translation\HasLocalePreference;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Str;
-use Illuminate\Support\Traits\Macroable;
-use Illuminate\Support\Traits\ReflectsClosures;
+use PPP_L7\Illuminate\Contracts\Notifications\Dispatcher as NotificationDispatcher;
+use PPP_L7\Illuminate\Contracts\Notifications\Factory as NotificationFactory;
+use PPP_L7\Illuminate\Contracts\Translation\HasLocalePreference;
+use PPP_L7\Illuminate\Support\Collection;
+use PPP_L7\Illuminate\Support\Str;
+use PPP_L7\Illuminate\Support\Traits\Macroable;
+use PPP_L7\Illuminate\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class NotificationFake implements NotificationDispatcher, NotificationFactory

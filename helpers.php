@@ -1,12 +1,13 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-use Illuminate\Contracts\Support\DeferringDisplayableValue;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Env;
-use Illuminate\Support\HigherOrderTapProxy;
-use Illuminate\Support\Optional;
+use PPP_L7\Illuminate\Contracts\Support\DeferringDisplayableValue;
+use PPP_L7\Illuminate\Contracts\Support\Htmlable;
+use PPP_L7\Illuminate\Support\Arr;
+use PPP_L7\Illuminate\Support\Collection;
+use PPP_L7\Illuminate\Support\Env;
+use PPP_L7\Illuminate\Support\HigherOrderTapProxy;
+use PPP_L7\Illuminate\Support\Optional;
 
 if (! function_exists('append_config')) {
     /**

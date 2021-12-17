@@ -1,8 +1,9 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Facades;
+namespace PPP_L7\Illuminate\Support\Facades;
 
-use Illuminate\Contracts\Routing\ResponseFactory as ResponseFactoryContract;
+use PPP_L7\Illuminate\Contracts\Routing\ResponseFactory as ResponseFactoryContract;
 
 /**
  * @method static \Illuminate\Http\JsonResponse json(string|array $data = [], int $status = 200, array $headers = [], int $options = 0)

@@ -1,10 +1,11 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L7\Illuminate\Support;
 
 use Closure;
-use Illuminate\Support\Traits\Macroable;
-use Symfony\Component\VarDumper\VarDumper;
+use PPP_L7\Illuminate\Support\Traits\Macroable;
+use PPP_L7\Symfony\Component\VarDumper\VarDumper;
 
 class Stringable
 {

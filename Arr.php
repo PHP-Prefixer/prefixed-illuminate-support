@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L7\Illuminate\Support;
 
 use ArrayAccess;
-use Illuminate\Support\Traits\Macroable;
+use PPP_L7\Illuminate\Support\Traits\Macroable;
 use InvalidArgumentException;
 
 class Arr

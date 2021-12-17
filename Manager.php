@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support;
+namespace PPP_L7\Illuminate\Support;
 
 use Closure;
-use Illuminate\Contracts\Container\Container;
+use PPP_L7\Illuminate\Contracts\Container\Container;
 use InvalidArgumentException;
 
 abstract class Manager

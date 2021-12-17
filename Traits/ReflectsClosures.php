@@ -1,9 +1,10 @@
 <?php
+/* This file has been prefixed by <PHP-Prefixer> for "Prefixed Illuminate package" */
 
-namespace Illuminate\Support\Traits;
+namespace PPP_L7\Illuminate\Support\Traits;
 
 use Closure;
-use Illuminate\Support\Reflector;
+use PPP_L7\Illuminate\Support\Reflector;
 use ReflectionFunction;
 use RuntimeException;
 
