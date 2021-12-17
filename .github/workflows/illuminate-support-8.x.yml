@@ -40,12 +40,14 @@ jobs:
           sed -i 's/branch-alias/php-prefixer/' '${{ github.workspace }}/composer.json'
           sed -i 's/dev-master/last-build/' '${{ github.workspace }}/composer.json'
           sed -i "s/[0-9].x-dev/`date`/" '${{ github.workspace }}/composer.json'
-      - name: Commit files
+      - name: Configure git
         run: |
           git config --local user.email "team@php-prefixer.com"
           git config --local user.name "PHP-Prefixer DevOps"
           export CHANGED=$(git status --porcelain)
-        if: ${{ contains(CHANGED, 'M ') }} |
+      - name: Commit files
+        if: ${{ contains(env.CHANGED, 'M ') }}
+        run: |
           git add -A
           git commit -m "Update composer.json info."
           git push
