@@ -24,6 +24,7 @@ use PPP_L8\Symfony\Component\Translation\Formatter\MessageFormatter;
 use PPP_L8\Symfony\Component\Translation\Formatter\MessageFormatterInterface;
 use PPP_L8\Symfony\Component\Translation\Loader\LoaderInterface;
 use PPP_L8\Symfony\Contracts\Translation\LocaleAwareInterface;
+use PPP_L8\Symfony\Contracts\Translation\TranslatableInterface;
 use PPP_L8\Symfony\Contracts\Translation\TranslatorInterface;
 
 // Help opcache.preload discover always-needed symbols
@@ -195,6 +196,10 @@ class Translator implements TranslatorInterface, TranslatorBagInterface, LocaleA
                 break;
             }
         }
+
+        $parameters = array_map(function ($parameter) use ($locale) {
+            return $parameter instanceof TranslatableInterface ? $parameter->trans($this, $locale) : $parameter;
+        }, $parameters);
 
         $len = \strlen(MessageCatalogue::INTL_DOMAIN_SUFFIX);
         if ($this->hasIntlFormatter
