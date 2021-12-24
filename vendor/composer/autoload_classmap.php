@@ -302,6 +302,7 @@ return array(
     'PPP_L8\\Illuminate\\Support\\LazyCollection' => $baseDir . '/vendor_prefixed/illuminate/collections/LazyCollection.php',
     'PPP_L8\\Illuminate\\Support\\Manager' => $baseDir . '/Manager.php',
     'PPP_L8\\Illuminate\\Support\\MessageBag' => $baseDir . '/MessageBag.php',
+    'PPP_L8\\Illuminate\\Support\\MultipleInstanceManager' => $baseDir . '/MultipleInstanceManager.php',
     'PPP_L8\\Illuminate\\Support\\MultipleItemsFoundException' => $baseDir . '/vendor_prefixed/illuminate/collections/MultipleItemsFoundException.php',
     'PPP_L8\\Illuminate\\Support\\NamespacedItemResolver' => $baseDir . '/NamespacedItemResolver.php',
     'PPP_L8\\Illuminate\\Support\\Optional' => $baseDir . '/Optional.php',

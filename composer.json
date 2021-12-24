@@ -330,6 +330,7 @@
             "vendor_prefixed/illuminate/collections/LazyCollection.php",
             "Manager.php",
             "MessageBag.php",
+            "MultipleInstanceManager.php",
             "vendor_prefixed/illuminate/collections/MultipleItemsFoundException.php",
             "NamespacedItemResolver.php",
             "Optional.php",

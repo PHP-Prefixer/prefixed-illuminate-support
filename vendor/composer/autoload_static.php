@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita329e596bb5faca4eddcc8a9e3bf15db
+class ComposerStaticInit518c8a5d8941046e51fda95c48cd9f78
 {
     public static $files = array (
         'fb1592a17af2ae22f98dce976cdba14c' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-mbstring/bootstrap.php',
@@ -311,6 +311,7 @@ class ComposerStaticInita329e596bb5faca4eddcc8a9e3bf15db
         'PPP_L8\\Illuminate\\Support\\LazyCollection' => __DIR__ . '/../..' . '/vendor_prefixed/illuminate/collections/LazyCollection.php',
         'PPP_L8\\Illuminate\\Support\\Manager' => __DIR__ . '/../..' . '/Manager.php',
         'PPP_L8\\Illuminate\\Support\\MessageBag' => __DIR__ . '/../..' . '/MessageBag.php',
+        'PPP_L8\\Illuminate\\Support\\MultipleInstanceManager' => __DIR__ . '/../..' . '/MultipleInstanceManager.php',
         'PPP_L8\\Illuminate\\Support\\MultipleItemsFoundException' => __DIR__ . '/../..' . '/vendor_prefixed/illuminate/collections/MultipleItemsFoundException.php',
         'PPP_L8\\Illuminate\\Support\\NamespacedItemResolver' => __DIR__ . '/../..' . '/NamespacedItemResolver.php',
         'PPP_L8\\Illuminate\\Support\\Optional' => __DIR__ . '/../..' . '/Optional.php',
@@ -448,7 +449,7 @@ class ComposerStaticInita329e596bb5faca4eddcc8a9e3bf15db
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInita329e596bb5faca4eddcc8a9e3bf15db::$classMap;
+            $loader->classMap = ComposerStaticInit518c8a5d8941046e51fda95c48cd9f78::$classMap;
 
         }, null, ClassLoader::class);
     }
