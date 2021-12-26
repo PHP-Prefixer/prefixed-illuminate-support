@@ -637,12 +637,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "72e9ca16699c8a03787be9de6841c3f295b64055"
+                "reference": "917399f41fb05bc2b2149cedc445b282d685c82a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/72e9ca16699c8a03787be9de6841c3f295b64055",
-                "reference": "72e9ca16699c8a03787be9de6841c3f295b64055",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/917399f41fb05bc2b2149cedc445b282d685c82a",
+                "reference": "917399f41fb05bc2b2149cedc445b282d685c82a",
                 "shasum": ""
             },
             "require": {
@@ -679,7 +679,7 @@
                 "symfony/config": "",
                 "symfony/yaml": ""
             },
-            "time": "2021-12-17T16:07:41+00:00",
+            "time": "2021-12-25T20:10:16+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
