@@ -466,8 +466,8 @@
         ],
         "files": [
             "vendor_prefixed/symfony/polyfill-mbstring/bootstrap.php",
-            "vendor_prefixed/symfony/polyfill-php80/bootstrap.php",
             "vendor_prefixed/symfony/translation/Resources/functions.php",
+            "vendor_prefixed/symfony/polyfill-php80/bootstrap.php",
             "vendor_prefixed/illuminate/collections/helpers.php",
             "helpers.php"
         ]

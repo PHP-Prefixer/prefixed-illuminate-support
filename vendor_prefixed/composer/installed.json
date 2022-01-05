@@ -101,12 +101,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "7cb18ab1acf3802917bda8c840c72d8d15a37f1c"
+                "reference": "e8c1cbd7a4cc8fb0e6a8978a55ef6d49c90bea59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/7cb18ab1acf3802917bda8c840c72d8d15a37f1c",
-                "reference": "7cb18ab1acf3802917bda8c840c72d8d15a37f1c",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/e8c1cbd7a4cc8fb0e6a8978a55ef6d49c90bea59",
+                "reference": "e8c1cbd7a4cc8fb0e6a8978a55ef6d49c90bea59",
                 "shasum": ""
             },
             "require": {
@@ -117,7 +117,7 @@
             "suggest": {
                 "symfony/var-dumper": "Required to use the dump method (^5.4)."
             },
-            "time": "2021-12-30T20:34:52+00:00",
+            "time": "2022-01-04T18:54:15+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -458,8 +458,8 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "dev-main",
-            "version_normalized": "dev-main",
+            "version": "v1.24.0",
+            "version_normalized": "1.24.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -481,7 +481,6 @@
                 "ext-mbstring": "For best performance"
             },
             "time": "2021-11-30T18:21:41+00:00",
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -525,7 +524,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/main"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.24.0"
             },
             "funding": [
                 {
@@ -545,8 +544,8 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "dev-main",
-            "version_normalized": "dev-main",
+            "version": "v1.24.0",
+            "version_normalized": "1.24.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -562,7 +561,6 @@
                 "php": ">=7.1"
             },
             "time": "2021-09-13T13:58:33+00:00",
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -612,7 +610,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/main"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.24.0"
             },
             "funding": [
                 {
@@ -637,12 +635,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "917399f41fb05bc2b2149cedc445b282d685c82a"
+                "reference": "0607b48bfbd9c2310915c79ffc2a853a655f4819"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/917399f41fb05bc2b2149cedc445b282d685c82a",
-                "reference": "917399f41fb05bc2b2149cedc445b282d685c82a",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/0607b48bfbd9c2310915c79ffc2a853a655f4819",
+                "reference": "0607b48bfbd9c2310915c79ffc2a853a655f4819",
                 "shasum": ""
             },
             "require": {
@@ -679,7 +677,7 @@
                 "symfony/config": "",
                 "symfony/yaml": ""
             },
-            "time": "2021-12-25T20:10:16+00:00",
+            "time": "2022-01-02T09:56:25+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
