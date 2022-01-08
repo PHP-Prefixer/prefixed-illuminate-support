@@ -101,12 +101,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "e8c1cbd7a4cc8fb0e6a8978a55ef6d49c90bea59"
+                "reference": "cfa88a486e04c3531d997b5f6e0a95cc148a5cd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/e8c1cbd7a4cc8fb0e6a8978a55ef6d49c90bea59",
-                "reference": "e8c1cbd7a4cc8fb0e6a8978a55ef6d49c90bea59",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/cfa88a486e04c3531d997b5f6e0a95cc148a5cd5",
+                "reference": "cfa88a486e04c3531d997b5f6e0a95cc148a5cd5",
                 "shasum": ""
             },
             "require": {
@@ -117,7 +117,7 @@
             "suggest": {
                 "symfony/var-dumper": "Required to use the dump method (^5.4)."
             },
-            "time": "2022-01-04T18:54:15+00:00",
+            "time": "2022-01-07T15:10:06+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -635,12 +635,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "0607b48bfbd9c2310915c79ffc2a853a655f4819"
+                "reference": "ecb78a083ae764cfe8dc4554b80d4f35c3f12280"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/0607b48bfbd9c2310915c79ffc2a853a655f4819",
-                "reference": "0607b48bfbd9c2310915c79ffc2a853a655f4819",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/ecb78a083ae764cfe8dc4554b80d4f35c3f12280",
+                "reference": "ecb78a083ae764cfe8dc4554b80d4f35c3f12280",
                 "shasum": ""
             },
             "require": {
@@ -677,7 +677,7 @@
                 "symfony/config": "",
                 "symfony/yaml": ""
             },
-            "time": "2022-01-02T09:56:25+00:00",
+            "time": "2022-01-07T00:29:17+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
