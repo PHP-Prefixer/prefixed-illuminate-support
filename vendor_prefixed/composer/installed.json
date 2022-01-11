@@ -258,12 +258,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "4218ff2d7bfe4dad794daf76a9aaba90e16213a6"
+                "reference": "b989a730e58636bbbd819cbb06c90ea05397d50a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4218ff2d7bfe4dad794daf76a9aaba90e16213a6",
-                "reference": "4218ff2d7bfe4dad794daf76a9aaba90e16213a6",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/b989a730e58636bbbd819cbb06c90ea05397d50a",
+                "reference": "b989a730e58636bbbd819cbb06c90ea05397d50a",
                 "shasum": ""
             },
             "require": {
@@ -284,7 +284,7 @@
                 "phpunit/phpunit": "^7.5.20 || ^8.5.14",
                 "squizlabs/php_codesniffer": "^3.4"
             },
-            "time": "2021-12-03T23:16:00+00:00",
+            "time": "2022-01-03T19:15:55+00:00",
             "default-branch": true,
             "bin": [
                 "bin/carbon"
