@@ -3,10 +3,8 @@
 
 namespace PPP_L8\Illuminate\Support;
 
-use PPP_L8\Doctrine\Inflector\CachedWordInflector;
 use PPP_L8\Doctrine\Inflector\Inflector;
-use PPP_L8\Doctrine\Inflector\Rules\English;
-use PPP_L8\Doctrine\Inflector\RulesetInflector;
+use PPP_L8\Doctrine\Inflector\InflectorFactory;
 
 class Pluralizer
 {
@@ -137,14 +135,7 @@ class Pluralizer
         static $inflector;
 
         if (is_null($inflector)) {
-            $inflector = new Inflector(
-                new CachedWordInflector(new RulesetInflector(
-                    English\Rules::getSingularRuleset()
-                )),
-                new CachedWordInflector(new RulesetInflector(
-                    English\Rules::getPluralRuleset()
-                ))
-            );
+            $inflector = InflectorFactory::createForLanguage('english')->build();
         }
 
         return $inflector;
