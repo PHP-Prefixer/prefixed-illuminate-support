@@ -101,12 +101,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "ed630f15e937c5c928a9454748ff727ce5ea01ec"
+                "reference": "5c600e92fddf70e8e054beffff2ae46edbbc5ed6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/ed630f15e937c5c928a9454748ff727ce5ea01ec",
-                "reference": "ed630f15e937c5c928a9454748ff727ce5ea01ec",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/5c600e92fddf70e8e054beffff2ae46edbbc5ed6",
+                "reference": "5c600e92fddf70e8e054beffff2ae46edbbc5ed6",
                 "shasum": ""
             },
             "require": {
@@ -117,7 +117,7 @@
             "suggest": {
                 "symfony/var-dumper": "Required to use the dump method (^5.4)."
             },
-            "time": "2022-01-17T15:04:13+00:00",
+            "time": "2022-01-21T15:00:59+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
