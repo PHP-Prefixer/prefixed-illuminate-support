@@ -366,6 +366,7 @@
             "vendor_prefixed/psr/simple-cache/src/CacheInterface.php",
             "vendor_prefixed/psr/simple-cache/src/InvalidArgumentException.php",
             "vendor_prefixed/symfony/polyfill-php80/Resources/stubs/Stringable.php",
+            "vendor_prefixed/symfony/translation/CatalogueMetadataAwareInterface.php",
             "vendor_prefixed/symfony/translation/Catalogue/AbstractOperation.php",
             "vendor_prefixed/symfony/translation/Catalogue/MergeOperation.php",
             "vendor_prefixed/symfony/translation/Catalogue/OperationInterface.php",

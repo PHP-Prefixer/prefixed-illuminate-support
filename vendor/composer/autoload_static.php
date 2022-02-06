@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit742ec0f0bfc96f7cc6ebae9c53fa25f4
+class ComposerStaticInit00a09536639de68ffec0e68bb766472e
 {
     public static $files = array (
         'fb1592a17af2ae22f98dce976cdba14c' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-mbstring/bootstrap.php',
@@ -346,6 +346,7 @@ class ComposerStaticInit742ec0f0bfc96f7cc6ebae9c53fa25f4
         'PPP_L8\\Psr\\SimpleCache\\CacheException' => __DIR__ . '/../..' . '/vendor_prefixed/psr/simple-cache/src/CacheException.php',
         'PPP_L8\\Psr\\SimpleCache\\CacheInterface' => __DIR__ . '/../..' . '/vendor_prefixed/psr/simple-cache/src/CacheInterface.php',
         'PPP_L8\\Psr\\SimpleCache\\InvalidArgumentException' => __DIR__ . '/../..' . '/vendor_prefixed/psr/simple-cache/src/InvalidArgumentException.php',
+        'PPP_L8\\Symfony\\Component\\Translation\\CatalogueMetadataAwareInterface' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/CatalogueMetadataAwareInterface.php',
         'PPP_L8\\Symfony\\Component\\Translation\\Catalogue\\AbstractOperation' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/Catalogue/AbstractOperation.php',
         'PPP_L8\\Symfony\\Component\\Translation\\Catalogue\\MergeOperation' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/Catalogue/MergeOperation.php',
         'PPP_L8\\Symfony\\Component\\Translation\\Catalogue\\OperationInterface' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/Catalogue/OperationInterface.php',
@@ -449,7 +450,7 @@ class ComposerStaticInit742ec0f0bfc96f7cc6ebae9c53fa25f4
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit742ec0f0bfc96f7cc6ebae9c53fa25f4::$classMap;
+            $loader->classMap = ComposerStaticInit00a09536639de68ffec0e68bb766472e::$classMap;
 
         }, null, ClassLoader::class);
     }

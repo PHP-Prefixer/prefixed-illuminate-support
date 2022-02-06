@@ -337,6 +337,7 @@ return array(
     'PPP_L8\\Psr\\SimpleCache\\CacheException' => $baseDir . '/vendor_prefixed/psr/simple-cache/src/CacheException.php',
     'PPP_L8\\Psr\\SimpleCache\\CacheInterface' => $baseDir . '/vendor_prefixed/psr/simple-cache/src/CacheInterface.php',
     'PPP_L8\\Psr\\SimpleCache\\InvalidArgumentException' => $baseDir . '/vendor_prefixed/psr/simple-cache/src/InvalidArgumentException.php',
+    'PPP_L8\\Symfony\\Component\\Translation\\CatalogueMetadataAwareInterface' => $baseDir . '/vendor_prefixed/symfony/translation/CatalogueMetadataAwareInterface.php',
     'PPP_L8\\Symfony\\Component\\Translation\\Catalogue\\AbstractOperation' => $baseDir . '/vendor_prefixed/symfony/translation/Catalogue/AbstractOperation.php',
     'PPP_L8\\Symfony\\Component\\Translation\\Catalogue\\MergeOperation' => $baseDir . '/vendor_prefixed/symfony/translation/Catalogue/MergeOperation.php',
     'PPP_L8\\Symfony\\Component\\Translation\\Catalogue\\OperationInterface' => $baseDir . '/vendor_prefixed/symfony/translation/Catalogue/OperationInterface.php',

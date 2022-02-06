@@ -21,6 +21,7 @@ use PPP_L8\Symfony\Component\Translation\Exception\UnsupportedSchemeException;
 use PPP_L8\Symfony\Component\Translation\Loader\LoaderInterface;
 use PPP_L8\Symfony\Component\Translation\Provider\Dsn;
 use PPP_L8\Symfony\Component\Translation\Provider\ProviderFactoryInterface;
+use PPP_L8\Symfony\Component\Translation\TranslatorBagInterface;
 use PPP_L8\Symfony\Contracts\HttpClient\HttpClientInterface;
 
 /**
@@ -37,6 +38,7 @@ abstract class ProviderFactoryTestCase extends TestCase
     protected string $defaultLocale;
     protected LoaderInterface $loader;
     protected XliffFileDumper $xliffFileDumper;
+    protected TranslatorBagInterface $translatorBag;
 
     abstract public function createFactory(): ProviderFactoryInterface;
 
@@ -144,5 +146,10 @@ abstract class ProviderFactoryTestCase extends TestCase
     protected function getXliffFileDumper(): XliffFileDumper
     {
         return $this->xliffFileDumper ??= $this->createMock(XliffFileDumper::class);
+    }
+
+    protected function getTranslatorBag(): TranslatorBagInterface
+    {
+        return $this->translatorBag ??= $this->createMock(TranslatorBagInterface::class);
     }
 }
