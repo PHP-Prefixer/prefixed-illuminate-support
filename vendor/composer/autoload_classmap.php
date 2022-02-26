@@ -84,6 +84,7 @@ return array(
     'PPP_L8\\Carbon\\Traits\\Units' => $baseDir . '/vendor_prefixed/nesbot/carbon/src/Carbon/Traits/Units.php',
     'PPP_L8\\Carbon\\Traits\\Week' => $baseDir . '/vendor_prefixed/nesbot/carbon/src/Carbon/Traits/Week.php',
     'PPP_L8\\Carbon\\Translator' => $baseDir . '/vendor_prefixed/nesbot/carbon/src/Carbon/Translator.php',
+    'PPP_L8\\Carbon\\TranslatorImmutable' => $baseDir . '/vendor_prefixed/nesbot/carbon/src/Carbon/TranslatorImmutable.php',
     'PPP_L8\\Carbon\\TranslatorStrongTypeInterface' => $baseDir . '/vendor_prefixed/nesbot/carbon/src/Carbon/TranslatorStrongTypeInterface.php',
     'PPP_L8\\Doctrine\\Inflector\\CachedWordInflector' => $baseDir . '/vendor_prefixed/doctrine/inflector/lib/Doctrine/Inflector/CachedWordInflector.php',
     'PPP_L8\\Doctrine\\Inflector\\GenericLanguageInflectorFactory' => $baseDir . '/vendor_prefixed/doctrine/inflector/lib/Doctrine/Inflector/GenericLanguageInflectorFactory.php',

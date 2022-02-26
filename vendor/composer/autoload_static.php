@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitab8b0406b15b91aa9c1e8d053a4ce093
+class ComposerStaticInit54a0db20912a883f9e6225fd93805b8f
 {
     public static $files = array (
         'fb1592a17af2ae22f98dce976cdba14c' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-mbstring/bootstrap.php',
@@ -93,6 +93,7 @@ class ComposerStaticInitab8b0406b15b91aa9c1e8d053a4ce093
         'PPP_L8\\Carbon\\Traits\\Units' => __DIR__ . '/../..' . '/vendor_prefixed/nesbot/carbon/src/Carbon/Traits/Units.php',
         'PPP_L8\\Carbon\\Traits\\Week' => __DIR__ . '/../..' . '/vendor_prefixed/nesbot/carbon/src/Carbon/Traits/Week.php',
         'PPP_L8\\Carbon\\Translator' => __DIR__ . '/../..' . '/vendor_prefixed/nesbot/carbon/src/Carbon/Translator.php',
+        'PPP_L8\\Carbon\\TranslatorImmutable' => __DIR__ . '/../..' . '/vendor_prefixed/nesbot/carbon/src/Carbon/TranslatorImmutable.php',
         'PPP_L8\\Carbon\\TranslatorStrongTypeInterface' => __DIR__ . '/../..' . '/vendor_prefixed/nesbot/carbon/src/Carbon/TranslatorStrongTypeInterface.php',
         'PPP_L8\\Doctrine\\Inflector\\CachedWordInflector' => __DIR__ . '/../..' . '/vendor_prefixed/doctrine/inflector/lib/Doctrine/Inflector/CachedWordInflector.php',
         'PPP_L8\\Doctrine\\Inflector\\GenericLanguageInflectorFactory' => __DIR__ . '/../..' . '/vendor_prefixed/doctrine/inflector/lib/Doctrine/Inflector/GenericLanguageInflectorFactory.php',
@@ -450,7 +451,7 @@ class ComposerStaticInitab8b0406b15b91aa9c1e8d053a4ce093
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitab8b0406b15b91aa9c1e8d053a4ce093::$classMap;
+            $loader->classMap = ComposerStaticInit54a0db20912a883f9e6225fd93805b8f::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -112,6 +112,7 @@
             "vendor_prefixed/nesbot/carbon/src/Carbon/Traits/Units.php",
             "vendor_prefixed/nesbot/carbon/src/Carbon/Traits/Week.php",
             "vendor_prefixed/nesbot/carbon/src/Carbon/Translator.php",
+            "vendor_prefixed/nesbot/carbon/src/Carbon/TranslatorImmutable.php",
             "vendor_prefixed/nesbot/carbon/src/Carbon/TranslatorStrongTypeInterface.php",
             "vendor_prefixed/doctrine/inflector/lib/Doctrine/Inflector/CachedWordInflector.php",
             "vendor_prefixed/doctrine/inflector/lib/Doctrine/Inflector/GenericLanguageInflectorFactory.php",

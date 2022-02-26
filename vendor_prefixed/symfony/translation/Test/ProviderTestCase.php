@@ -32,11 +32,11 @@ use PPP_L8\Symfony\Contracts\HttpClient\HttpClientInterface;
 abstract class ProviderTestCase extends TestCase
 {
     protected HttpClientInterface $client;
-    protected LoggerInterface $logger;
+    protected LoggerInterface|MockObject $logger;
     protected string $defaultLocale;
-    protected LoaderInterface $loader;
-    protected XliffFileDumper $xliffFileDumper;
-    protected TranslatorBagInterface $translatorBag;
+    protected LoaderInterface|MockObject $loader;
+    protected XliffFileDumper|MockObject $xliffFileDumper;
+    protected TranslatorBagInterface|MockObject $translatorBag;
 
     abstract public function createProvider(HttpClientInterface $client, LoaderInterface $loader, LoggerInterface $logger, string $defaultLocale, string $endpoint): ProviderInterface;
 
@@ -58,17 +58,11 @@ abstract class ProviderTestCase extends TestCase
         return $this->client ??= new MockHttpClient();
     }
 
-    /**
-     * @return LoaderInterface&MockObject
-     */
     protected function getLoader(): LoaderInterface
     {
         return $this->loader ??= $this->createMock(LoaderInterface::class);
     }
 
-    /**
-     * @return LoaderInterface&MockObject
-     */
     protected function getLogger(): LoggerInterface
     {
         return $this->logger ??= $this->createMock(LoggerInterface::class);
@@ -79,17 +73,11 @@ abstract class ProviderTestCase extends TestCase
         return $this->defaultLocale ??= 'en';
     }
 
-    /**
-     * @return LoaderInterface&MockObject
-     */
     protected function getXliffFileDumper(): XliffFileDumper
     {
         return $this->xliffFileDumper ??= $this->createMock(XliffFileDumper::class);
     }
 
-    /**
-     * @return TranslatorBagInterface|TranslatorBagInterface&MockObject
-     */
     protected function getTranslatorBag(): TranslatorBagInterface
     {
         return $this->translatorBag ??= $this->createMock(TranslatorBagInterface::class);

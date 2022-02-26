@@ -22,6 +22,11 @@ use PPP_L8\Symfony\Component\Translation\MessageCatalogue;
  */
 class XliffFileDumper extends FileDumper
 {
+    public function __construct(
+        private string $extension = 'xlf',
+    ) {
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -53,7 +58,7 @@ class XliffFileDumper extends FileDumper
      */
     protected function getExtension(): string
     {
-        return 'xlf';
+        return $this->extension;
     }
 
     private function dumpXliff1(string $defaultLocale, MessageCatalogue $messages, ?string $domain, array $options = [])

@@ -12,6 +12,7 @@
 
 namespace PPP_L8\Symfony\Component\Translation\Test;
 
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 use PPP_L8\Symfony\Component\HttpClient\MockHttpClient;
@@ -34,11 +35,11 @@ use PPP_L8\Symfony\Contracts\HttpClient\HttpClientInterface;
 abstract class ProviderFactoryTestCase extends TestCase
 {
     protected HttpClientInterface $client;
-    protected LoggerInterface $logger;
+    protected LoggerInterface|MockObject $logger;
     protected string $defaultLocale;
-    protected LoaderInterface $loader;
-    protected XliffFileDumper $xliffFileDumper;
-    protected TranslatorBagInterface $translatorBag;
+    protected LoaderInterface|MockObject $loader;
+    protected XliffFileDumper|MockObject $xliffFileDumper;
+    protected TranslatorBagInterface|MockObject $translatorBag;
 
     abstract public function createFactory(): ProviderFactoryInterface;
 
