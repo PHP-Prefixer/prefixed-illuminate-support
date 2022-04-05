@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit54a0db20912a883f9e6225fd93805b8f
+class ComposerStaticInitfeb24086712020c506bd9321a6771b8d
 {
     public static $files = array (
         'fb1592a17af2ae22f98dce976cdba14c' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-mbstring/bootstrap.php',
@@ -409,6 +409,7 @@ class ComposerStaticInit54a0db20912a883f9e6225fd93805b8f
         'PPP_L8\\Symfony\\Component\\Translation\\Loader\\QtFileLoader' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/Loader/QtFileLoader.php',
         'PPP_L8\\Symfony\\Component\\Translation\\Loader\\XliffFileLoader' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/Loader/XliffFileLoader.php',
         'PPP_L8\\Symfony\\Component\\Translation\\Loader\\YamlFileLoader' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/Loader/YamlFileLoader.php',
+        'PPP_L8\\Symfony\\Component\\Translation\\LocaleSwitcher' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/LocaleSwitcher.php',
         'PPP_L8\\Symfony\\Component\\Translation\\LoggingTranslator' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/LoggingTranslator.php',
         'PPP_L8\\Symfony\\Component\\Translation\\MessageCatalogue' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/MessageCatalogue.php',
         'PPP_L8\\Symfony\\Component\\Translation\\MessageCatalogueInterface' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/MessageCatalogueInterface.php',
@@ -441,9 +442,11 @@ class ComposerStaticInit54a0db20912a883f9e6225fd93805b8f
         'PPP_L8\\Symfony\\Contracts\\Translation\\TranslatorInterface' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation-contracts/TranslatorInterface.php',
         'PPP_L8\\Symfony\\Contracts\\Translation\\TranslatorTrait' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation-contracts/TranslatorTrait.php',
         'PPP_L8\\voku\\helper\\ASCII' => __DIR__ . '/../..' . '/vendor_prefixed/voku/portable-ascii/src/voku/helper/ASCII.php',
+        'PhpToken' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'Stringable' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-mbstring/Mbstring.php',
         'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-php80/Php80.php',
+        'Symfony\\Polyfill\\Php80\\PhpToken' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-php80/PhpToken.php',
         'UnhandledMatchError' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );
@@ -451,7 +454,7 @@ class ComposerStaticInit54a0db20912a883f9e6225fd93805b8f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit54a0db20912a883f9e6225fd93805b8f::$classMap;
+            $loader->classMap = ComposerStaticInitfeb24086712020c506bd9321a6771b8d::$classMap;
 
         }, null, ClassLoader::class);
     }

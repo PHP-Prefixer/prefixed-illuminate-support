@@ -6,6 +6,7 @@ namespace PPP_L8\Illuminate\Support\Testing\Fakes;
 use Closure;
 use PPP_L8\Illuminate\Contracts\Events\Dispatcher;
 use PPP_L8\Illuminate\Support\Arr;
+use PPP_L8\Illuminate\Support\Str;
 use PPP_L8\Illuminate\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 use ReflectionFunction;
@@ -61,6 +62,10 @@ class EventFake implements Dispatcher
         foreach ($this->dispatcher->getListeners($expectedEvent) as $listenerClosure) {
             $actualListener = (new ReflectionFunction($listenerClosure))
                         ->getStaticVariables()['listener'];
+
+            if (is_string($actualListener) && Str::endsWith($actualListener, '@handle')) {
+                $actualListener = Str::parseCallback($actualListener)[0];
+            }
 
             if ($actualListener === $expectedListener ||
                 ($actualListener instanceof Closure &&

@@ -73,7 +73,7 @@ return [
         $lastDigit = $number % 10;
 
         return $number.(
-            (~~($number % 100 / 10) === 1) ? 'th' : (
+            ((int) ($number % 100 / 10) === 1) ? 'th' : (
                 ($lastDigit === 1) ? 'st' : (
                     ($lastDigit === 2) ? 'nd' : (
                         ($lastDigit === 3) ? 'rd' : 'th'

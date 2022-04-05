@@ -360,6 +360,7 @@
             "Traits/Tappable.php",
             "ValidatedInput.php",
             "ViewErrorBag.php",
+            "vendor_prefixed/symfony/polyfill-php80/Resources/stubs/PhpToken.php",
             "vendor_prefixed/psr/container/src/ContainerExceptionInterface.php",
             "vendor_prefixed/psr/container/src/ContainerInterface.php",
             "vendor_prefixed/psr/container/src/NotFoundExceptionInterface.php",
@@ -429,6 +430,7 @@
             "vendor_prefixed/symfony/translation/Loader/QtFileLoader.php",
             "vendor_prefixed/symfony/translation/Loader/XliffFileLoader.php",
             "vendor_prefixed/symfony/translation/Loader/YamlFileLoader.php",
+            "vendor_prefixed/symfony/translation/LocaleSwitcher.php",
             "vendor_prefixed/symfony/translation/LoggingTranslator.php",
             "vendor_prefixed/symfony/translation/MessageCatalogue.php",
             "vendor_prefixed/symfony/translation/MessageCatalogueInterface.php",
@@ -462,6 +464,7 @@
             "vendor_prefixed/symfony/translation-contracts/TranslatorTrait.php",
             "vendor_prefixed/symfony/polyfill-mbstring/Mbstring.php",
             "vendor_prefixed/symfony/polyfill-php80/Php80.php",
+            "vendor_prefixed/symfony/polyfill-php80/PhpToken.php",
             "vendor_prefixed/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php",
             "vendor_prefixed/symfony/polyfill-php80/Resources/stubs/ValueError.php",
             "vendor_prefixed/voku/portable-ascii/src/voku/helper/ASCII.php"
