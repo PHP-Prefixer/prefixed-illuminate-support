@@ -22,6 +22,7 @@ use PPP_L8\Symfony\Component\Console\Input\InputInterface;
 use PPP_L8\Symfony\Component\Console\Input\InputOption;
 use PPP_L8\Symfony\Component\Console\Output\OutputInterface;
 use PPP_L8\Symfony\Component\Console\Style\SymfonyStyle;
+use PPP_L8\Symfony\Component\Translation\Provider\FilteringProvider;
 use PPP_L8\Symfony\Component\Translation\Provider\TranslationProviderCollection;
 use PPP_L8\Symfony\Component\Translation\Reader\TranslationReaderInterface;
 use PPP_L8\Symfony\Component\Translation\TranslatorBag;
@@ -130,6 +131,12 @@ EOF
         $force = $input->getOption('force');
         $deleteMissing = $input->getOption('delete-missing');
 
+        if (!$domains && $provider instanceof FilteringProvider) {
+            $domains = $provider->getDomains();
+        }
+
+        // Reading local translations must be done after retrieving the domains from the provider
+        // in order to manage only translations from configured domains
         $localTranslations = $this->readLocalTranslations($locales, $domains, $this->transPaths);
 
         if (!$domains) {

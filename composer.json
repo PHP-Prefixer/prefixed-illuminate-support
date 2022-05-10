@@ -458,7 +458,6 @@
             "vendor_prefixed/symfony/translation/Writer/TranslationWriter.php",
             "vendor_prefixed/symfony/translation/Writer/TranslationWriterInterface.php",
             "vendor_prefixed/symfony/translation-contracts/LocaleAwareInterface.php",
-            "vendor_prefixed/symfony/translation-contracts/Test/TranslatorTest.php",
             "vendor_prefixed/symfony/translation-contracts/TranslatableInterface.php",
             "vendor_prefixed/symfony/translation-contracts/TranslatorInterface.php",
             "vendor_prefixed/symfony/translation-contracts/TranslatorTrait.php",
@@ -471,8 +470,8 @@
         ],
         "files": [
             "vendor_prefixed/symfony/polyfill-mbstring/bootstrap.php",
-            "vendor_prefixed/symfony/translation/Resources/functions.php",
             "vendor_prefixed/symfony/polyfill-php80/bootstrap.php",
+            "vendor_prefixed/symfony/translation/Resources/functions.php",
             "vendor_prefixed/illuminate/collections/helpers.php",
             "helpers.php"
         ]

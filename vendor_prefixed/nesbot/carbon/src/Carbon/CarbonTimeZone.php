@@ -31,7 +31,7 @@ class CarbonTimeZone extends DateTimeZone
             throw new InvalidTimeZoneException('Absolute timezone offset cannot be greater than 100.');
         }
 
-        return ($timezone >= 0 ? '+' : '').$timezone.':00';
+        return ($timezone >= 0 ? '+' : '').ltrim($timezone, '+').':00';
     }
 
     protected static function getDateTimeZoneNameFromMixed($timezone)
@@ -102,15 +102,15 @@ class CarbonTimeZone extends DateTimeZone
             $tz = static::getDateTimeZoneFromName($object);
         }
 
-        if ($tz === false) {
-            if (Carbon::isStrictModeEnabled()) {
-                throw new InvalidTimeZoneException('Unknown or bad timezone ('.($objectDump ?: $object).')');
-            }
-
-            return false;
+        if ($tz !== false) {
+            return new static($tz->getName());
         }
 
-        return new static($tz->getName());
+        if (Carbon::isStrictModeEnabled()) {
+            throw new InvalidTimeZoneException('Unknown or bad timezone ('.($objectDump ?: $object).')');
+        }
+
+        return false;
     }
 
     /**
@@ -232,15 +232,15 @@ class CarbonTimeZone extends DateTimeZone
     {
         $tz = $this->toRegionName($date);
 
-        if ($tz === false) {
-            if (Carbon::isStrictModeEnabled()) {
-                throw new InvalidTimeZoneException('Unknown timezone for offset '.$this->getOffset($date ?: Carbon::now($this)).' seconds.');
-            }
-
-            return false;
+        if ($tz !== false) {
+            return new static($tz);
         }
 
-        return new static($tz);
+        if (Carbon::isStrictModeEnabled()) {
+            throw new InvalidTimeZoneException('Unknown timezone for offset '.$this->getOffset($date ?: Carbon::now($this)).' seconds.');
+        }
+
+        return false;
     }
 
     /**

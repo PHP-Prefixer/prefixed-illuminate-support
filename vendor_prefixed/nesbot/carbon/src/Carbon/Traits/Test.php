@@ -29,7 +29,7 @@ trait Test
     /**
      * A test Carbon instance to be returned when now instances are created.
      *
-     * @var static
+     * @var Closure|static|null
      */
     protected static $testNow;
 
@@ -60,15 +60,13 @@ trait Test
      *
      * /!\ Use this method for unit tests only.
      *
-     * @param Closure|static|string|false|null $testNow real or mock Carbon instance
+     * @param DateTimeInterface|Closure|static|string|false|null $testNow real or mock Carbon instance
      */
     public static function setTestNow($testNow = null)
     {
-        if ($testNow === false) {
-            $testNow = null;
-        }
-
-        static::$testNow = \is_string($testNow) ? static::parse($testNow) : $testNow;
+        static::$testNow = $testNow instanceof self || $testNow instanceof Closure
+            ? $testNow
+            : static::make($testNow);
     }
 
     /**
@@ -88,7 +86,7 @@ trait Test
      *
      * /!\ Use this method for unit tests only.
      *
-     * @param Closure|static|string|false|null $testNow real or mock Carbon instance
+     * @param DateTimeInterface|Closure|static|string|false|null $testNow real or mock Carbon instance
      */
     public static function setTestNowAndTimezone($testNow = null, $tz = null)
     {
@@ -122,8 +120,8 @@ trait Test
      *
      * /!\ Use this method for unit tests only.
      *
-     * @param Closure|static|string|false|null $testNow  real or mock Carbon instance
-     * @param Closure|null                     $callback
+     * @param DateTimeInterface|Closure|static|string|false|null $testNow  real or mock Carbon instance
+     * @param Closure|null                                       $callback
      *
      * @return mixed
      */

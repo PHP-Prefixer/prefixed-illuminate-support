@@ -428,7 +428,6 @@ return array(
     'PPP_L8\\Symfony\\Component\\Translation\\Writer\\TranslationWriter' => $baseDir . '/vendor_prefixed/symfony/translation/Writer/TranslationWriter.php',
     'PPP_L8\\Symfony\\Component\\Translation\\Writer\\TranslationWriterInterface' => $baseDir . '/vendor_prefixed/symfony/translation/Writer/TranslationWriterInterface.php',
     'PPP_L8\\Symfony\\Contracts\\Translation\\LocaleAwareInterface' => $baseDir . '/vendor_prefixed/symfony/translation-contracts/LocaleAwareInterface.php',
-    'PPP_L8\\Symfony\\Contracts\\Translation\\Test\\TranslatorTest' => $baseDir . '/vendor_prefixed/symfony/translation-contracts/Test/TranslatorTest.php',
     'PPP_L8\\Symfony\\Contracts\\Translation\\TranslatableInterface' => $baseDir . '/vendor_prefixed/symfony/translation-contracts/TranslatableInterface.php',
     'PPP_L8\\Symfony\\Contracts\\Translation\\TranslatorInterface' => $baseDir . '/vendor_prefixed/symfony/translation-contracts/TranslatorInterface.php',
     'PPP_L8\\Symfony\\Contracts\\Translation\\TranslatorTrait' => $baseDir . '/vendor_prefixed/symfony/translation-contracts/TranslatorTrait.php',

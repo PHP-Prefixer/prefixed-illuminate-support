@@ -629,7 +629,7 @@ trait Converter
             $period->setDateInterval($interval);
         }
 
-        if (\is_int($end) || \is_string($end) && ctype_digit($end)) {
+        if (\is_int($end) || (\is_string($end) && ctype_digit($end))) {
             $period->setRecurrences($end);
         } elseif ($end) {
             $period->setEndDate($end);

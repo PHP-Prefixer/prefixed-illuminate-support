@@ -4,12 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit186fb497368deb8ac247a6f401ffb059
+class ComposerStaticInit7e9719a2d175d970862fce4a417652af
 {
     public static $files = array (
         'fb1592a17af2ae22f98dce976cdba14c' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-mbstring/bootstrap.php',
-        '3766b68665314d158c3de8964f0ec2be' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/Resources/functions.php',
         'a65980b53b1cb8488af91e2575c67381' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/polyfill-php80/bootstrap.php',
+        '3766b68665314d158c3de8964f0ec2be' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/Resources/functions.php',
         'e6cac2049f04f847e8e9cf3b2866cc5a' => __DIR__ . '/../..' . '/vendor_prefixed/illuminate/collections/helpers.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/../..' . '/helpers.php',
     );
@@ -437,7 +437,6 @@ class ComposerStaticInit186fb497368deb8ac247a6f401ffb059
         'PPP_L8\\Symfony\\Component\\Translation\\Writer\\TranslationWriter' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/Writer/TranslationWriter.php',
         'PPP_L8\\Symfony\\Component\\Translation\\Writer\\TranslationWriterInterface' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation/Writer/TranslationWriterInterface.php',
         'PPP_L8\\Symfony\\Contracts\\Translation\\LocaleAwareInterface' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation-contracts/LocaleAwareInterface.php',
-        'PPP_L8\\Symfony\\Contracts\\Translation\\Test\\TranslatorTest' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation-contracts/Test/TranslatorTest.php',
         'PPP_L8\\Symfony\\Contracts\\Translation\\TranslatableInterface' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation-contracts/TranslatableInterface.php',
         'PPP_L8\\Symfony\\Contracts\\Translation\\TranslatorInterface' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation-contracts/TranslatorInterface.php',
         'PPP_L8\\Symfony\\Contracts\\Translation\\TranslatorTrait' => __DIR__ . '/../..' . '/vendor_prefixed/symfony/translation-contracts/TranslatorTrait.php',
@@ -454,7 +453,7 @@ class ComposerStaticInit186fb497368deb8ac247a6f401ffb059
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit186fb497368deb8ac247a6f401ffb059::$classMap;
+            $loader->classMap = ComposerStaticInit7e9719a2d175d970862fce4a417652af::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -644,7 +644,7 @@ trait Date
      *
      * @return array
      */
-    protected static function getRangesByUnit()
+    protected static function getRangesByUnit(int $daysInMonth = 31): array
     {
         return [
             // @call roundUnit
@@ -652,7 +652,7 @@ trait Date
             // @call roundUnit
             'month' => [1, static::MONTHS_PER_YEAR],
             // @call roundUnit
-            'day' => [1, 31],
+            'day' => [1, $daysInMonth],
             // @call roundUnit
             'hour' => [0, static::HOURS_PER_DAY - 1],
             // @call roundUnit
@@ -1260,7 +1260,7 @@ trait Date
 
         if (
             $this->getTranslationMessage("$standaloneKey.$subKey") &&
-            (!$context || ($regExp = $this->getTranslationMessage("${baseKey}_regexp")) && !preg_match($regExp, $context))
+            (!$context || (($regExp = $this->getTranslationMessage("${baseKey}_regexp")) && !preg_match($regExp, $context)))
         ) {
             $key = $standaloneKey;
         }
@@ -2570,7 +2570,7 @@ trait Date
         if (str_starts_with($unit, 'is')) {
             $word = substr($unit, 2);
 
-            if (\in_array($word, static::$days)) {
+            if (\in_array($word, static::$days, true)) {
                 return $this->isDayOfWeek($word);
             }
 
@@ -2598,7 +2598,7 @@ trait Date
             $unit = strtolower(substr($unit, 3));
         }
 
-        if (\in_array($unit, static::$units)) {
+        if (\in_array($unit, static::$units, true)) {
             return $this->setUnit($unit, ...$parameters);
         }
 

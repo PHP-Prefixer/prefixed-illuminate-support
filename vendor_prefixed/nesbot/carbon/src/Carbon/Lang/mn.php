@@ -45,6 +45,7 @@ return [
     'second' => ':count секунд',
     's' => ':countс',
 
+    'ago_mode' => 'last',
     'ago' => ':time өмнө',
     'year_ago' => ':count жилийн',
     'y_ago' => ':count жилийн',
@@ -58,6 +59,7 @@ return [
     'minute_ago' => ':count минутын',
     'second_ago' => ':count секундын',
 
+    'from_now_mode' => 'last',
     'from_now' => 'одоогоос :time',
     'year_from_now' => ':count жилийн дараа',
     'y_from_now' => ':count жилийн дараа',
@@ -69,7 +71,7 @@ return [
     'minute_from_now' => ':count минутын дараа',
     'second_from_now' => ':count секундын дараа',
 
-    // Does it required to make translation for before, after as follows? hmm, I think we've made it with ago and from now keywords already. Anyway, I've included it just in case of undesired action...
+    'after_mode' => 'last',
     'after' => ':time дараа',
     'year_after' => ':count жилийн',
     'y_after' => ':count жилийн',
@@ -81,6 +83,7 @@ return [
     'minute_after' => ':count минутын',
     'second_after' => ':count секундын',
 
+    'before_mode' => 'last',
     'before' => ':time өмнө',
     'year_before' => ':count жилийн',
     'y_before' => ':count жилийн',

@@ -14,4 +14,5 @@ namespace PPP_L8\Carbon\Exceptions;
 
 interface BadMethodCallException extends Exception
 {
+    //
 }

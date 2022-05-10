@@ -143,7 +143,7 @@ trait Serialization
     #[ReturnTypeWillChange]
     public function __wakeup()
     {
-        if (get_parent_class() && method_exists(parent::class, '__wakeup')) {
+        if (parent::class && method_exists(parent::class, '__wakeup')) {
             // @codeCoverageIgnoreStart
             try {
                 parent::__wakeup();
