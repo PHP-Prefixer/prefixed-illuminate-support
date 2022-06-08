@@ -3,7 +3,7 @@
         'name' => 'illuminate/support',
         'pretty_version' => '8.x-dev',
         'version' => '8.9999999.9999999.9999999-dev',
-        'reference' => '5a5aad8a6b3e0955cdc7d822d0b6f4bedc7e4a36',
+        'reference' => '2f39fdf2eb5811f52b3c90884ab7fa83783fca59',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'illuminate/support' => array(
             'pretty_version' => '8.x-dev',
             'version' => '8.9999999.9999999.9999999-dev',
-            'reference' => '5a5aad8a6b3e0955cdc7d822d0b6f4bedc7e4a36',
+            'reference' => '2f39fdf2eb5811f52b3c90884ab7fa83783fca59',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
